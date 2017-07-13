@@ -1,0 +1,54 @@
+Windows PowerShell
+Copyright (C) 2016 Microsoft Corporation. All rights reserved.
+
+PS C:\Users\takai> Enter-PSSession nanoch-0114927
+[nanoch-0114927]: PS C:\Users\takai\Documents> docker
+The term 'docker' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spel
+ling of the name, or if a path was included, verify that the path is correct and try again.
+    + CategoryInfo          : ObjectNotFound: (docker:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+[nanoch-0114927]: PS C:\Users\takai\Documents> Install-Module -Name DockerMsftProvider -Repository PSGallery
+
+NuGet provider is required to continue
+PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based repositories. The NuGet
+ provider must be available in 'C:\Program Files\PackageManagement\ProviderAssemblies' or
+'C:\Users\takai\AppData\Local\PackageManagement\ProviderAssemblies'. You can also install the NuGet provider by running
+ 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force'. Do you want PowerShellGet to install and
+import the NuGet provider now?
+[Y] Yes  [N] No  [?] ƒwƒ‹ƒv (Šù’è’l‚Í "Y"): Y
+
+Untrusted repository
+You are installing the modules from an untrusted repository. If you trust this repository, change its
+InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to install the modules from
+'PSGallery'?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] ƒwƒ‹ƒv (Šù’è’l‚Í "N"): Y
+[nanoch-0114927]: PS C:\Users\takai\Documents> Find-Package -Name docker
+
+Name                           Version          Source           Summary
+----                           -------          ------           -------
+Docker                         1.3.1            PSGallery        This module helps with development using Docker on ...
+
+
+[nanoch-0114927]: PS C:\Users\takai\Documents> Find-Package -Name docker -ProviderName DockerMsftProvider
+
+Name                           Version          Source           Summary
+----                           -------          ------           -------
+Docker                         17.03.1-ee       DockerDefault    Contains Docker EE for use with Windows Server 2016...
+
+
+[nanoch-0114927]: PS C:\Users\takai\Documents> Install-Package -Name docker -ProviderName DockerMsftProvider
+
+The package(s) come(s) from a package source that is not marked as trusted.
+Are you sure you want to install software from 'DockerDefault'?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [?] ƒwƒ‹ƒv (Šù’è’l‚Í "N"): Y
+Œx: KB3176936 or later is required for docker to work. Please ensure this is installed.
+Œx: A restart is required to start docker service. Please restart your machine.
+Œx: After the restart please start the docker service.
+
+Name                           Version          Source           Summary
+----                           -------          ------           -------
+Docker                         17.03.1-ee       DockerDefault    Contains Docker EE for use with Windows Server 2016...
+
+
+[nanoch-0114927]: PS C:\Users\takai\Documents> Restart-Computer

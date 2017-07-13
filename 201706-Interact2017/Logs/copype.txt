@@ -1,0 +1,327 @@
+Windows PowerShell
+Copyright (C) 2016 Microsoft Corporation. All rights reserved.
+
+PS C:\Windows\system32> cd D:\Shares\Share\WinPE\
+PS D:\Shares\Share\WinPE> dir
+
+
+    ディレクトリ: D:\Shares\Share\WinPE
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       2017/06/20     21:23                fwfiles
+d-----       2017/06/20     21:23                media
+d-----       2017/06/20     21:23                mount
+-a----       2017/06/20     20:57            168 boot.cmd
+-a----       2017/06/20     21:09            348 Install-DomainJoinScripts.ps1
+-a----       2017/06/20     21:08           4414 Install-RequiredPackages.ps1
+-a----       2017/06/20     21:00             76 lang.ini
+-a----       2017/06/20     21:23            295 Prepare-NanoPEImage.ps1
+-a----       2017/06/20     20:48          19455 WinPENanoDomainJoin.ps1
+-a----       2017/06/20     21:00             36 Winpeshl.ini
+
+
+PS D:\Shares\Share\WinPE> .\Prepare-NanoPEImage.ps1
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージをマウントしています
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-WMI-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-WMI-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-NetFx-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-NetFx-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-Scripting-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-Scripting-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-PowerShell-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-PowerShell-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-DismCmdlets-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-DismCmdlets-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-SecureBootCmdlets-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-StorageWMI-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-StorageWMI-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-WDS-Tools-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-WDS-Tools-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-Setup-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-Setup-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-Setup-Client-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Processing 1 of 1 - Adding package WinPE-Setup-Client-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+[==========================100.0%==========================]
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージのバージョン: 10.0.14393.0
+
+Packages listing:
+
+Package Identity : Microsoft-Windows-WinPE-LanguagePack-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+State : Installed
+Release Type : Language Pack
+Install Time : 2016/07/16 12:36
+
+Package Identity : Microsoft-Windows-WinPE-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+State : Installed
+Release Type : Foundation
+Install Time : 2016/07/16 12:14
+
+Package Identity : WinPE-DismCmdlets-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+State : Installed
+Release Type : Language Pack
+Install Time : 2017/06/20 12:26
+
+Package Identity : WinPE-DismCmdlets-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+State : Installed
+Release Type : Feature Pack
+Install Time : 2017/06/20 12:26
+
+Package Identity : WinPE-NetFx-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+State : Installed
+Release Type : Language Pack
+Install Time : 2017/06/20 12:26
+
+Package Identity : WinPE-NetFx-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+State : Installed
+Release Type : Feature Pack
+Install Time : 2017/06/20 12:26
+
+Package Identity : WinPE-PowerShell-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+State : Installed
+Release Type : Language Pack
+Install Time : 2017/06/20 12:26
+
+Package Identity : WinPE-PowerShell-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+State : Installed
+Release Type : Feature Pack
+Install Time : 2017/06/20 12:26
+
+Package Identity : WinPE-Scripting-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+State : Installed
+Release Type : Language Pack
+Install Time : 2017/06/20 12:26
+
+Package Identity : WinPE-Scripting-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+State : Installed
+Release Type : Feature Pack
+Install Time : 2017/06/20 12:26
+
+Package Identity : WinPE-SecureBootCmdlets-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+State : Installed
+Release Type : Feature Pack
+Install Time : 2017/06/20 12:26
+
+Package Identity : WinPE-Setup-Client-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+State : Installed
+Release Type : Language Pack
+Install Time : 2017/06/20 12:27
+
+Package Identity : WinPE-Setup-Client-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+State : Installed
+Release Type : Feature Pack
+Install Time : 2017/06/20 12:27
+
+Package Identity : WinPE-Setup-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+State : Installed
+Release Type : Language Pack
+Install Time : 2017/06/20 12:27
+
+Package Identity : WinPE-Setup-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+State : Installed
+Release Type : Feature Pack
+Install Time : 2017/06/20 12:27
+
+Package Identity : WinPE-StorageWMI-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+State : Installed
+Release Type : Language Pack
+Install Time : 2017/06/20 12:27
+
+Package Identity : WinPE-StorageWMI-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+State : Installed
+Release Type : Feature Pack
+Install Time : 2017/06/20 12:26
+
+Package Identity : WinPE-WDS-Tools-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+State : Installed
+Release Type : Language Pack
+Install Time : 2017/06/20 12:27
+
+Package Identity : WinPE-WDS-Tools-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+State : Installed
+Release Type : Feature Pack
+Install Time : 2017/06/20 12:27
+
+Package Identity : WinPE-WMI-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0
+State : Installed
+Release Type : Language Pack
+Install Time : 2017/06/20 12:24
+
+Package Identity : WinPE-WMI-Package~31bf3856ad364e35~amd64~~10.0.14393.0
+State : Installed
+Release Type : Feature Pack
+Install Time : 2017/06/20 12:24
+
+操作は正常に完了しました。
+
+展開イメージのサービスと管理ツール
+バージョン: 10.0.14393.0
+
+イメージを保存しています
+[==========================100.0%==========================]
+イメージのマウントを解除しています
+[==========================100.0%==========================]
+操作は正常に完了しました。
+PS D:\Shares\Share\WinPE>
