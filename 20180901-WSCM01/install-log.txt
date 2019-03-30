@@ -1,0 +1,595 @@
+﻿Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Administrator>
+PS C:\Users\Administrator> Get-WindowsFeature
+
+Display Name                                            Name                       Install State
+------------                                            ----                       -------------
+[ ] Active Directory Federation Services                ADFS-Federation                Available
+[ ] Active Directory Rights Management サービス         ADRMS                          Available
+    [ ] Active Directory Rights Management サーバー     ADRMS-Server                   Available
+    [ ] ID フェデレーション サポート                    ADRMS-Identity                 Available
+[ ] Active Directory ドメイン サービス                  AD-Domain-Services             Available
+[ ] Active Directory ライトウェイト ディレクトリ サ...  ADLDS                          Available
+[ ] Active Directory 証明書サービス                     AD-Certificate                 Available
+    [ ] 証明機関                                        ADCS-Cert-Authority            Available
+    [ ] オンライン レスポンダー                         ADCS-Online-Cert               Available
+    [ ] ネットワーク デバイス登録サービス               ADCS-Device-Enrollment         Available
+    [ ] 証明機関 Web 登録                               ADCS-Web-Enrollment            Available
+    [ ] 証明書の登録 Web サービス                       ADCS-Enroll-Web-Svc            Available
+    [ ] 証明書の登録ポリシー Web サービス               ADCS-Enroll-Web-Pol            Available
+[ ] DHCP サーバー                                       DHCP                           Available
+[ ] DNS サーバー                                        DNS                            Available
+[ ] FAX サーバー                                        Fax                            Available
+[ ] Host Guardian サービス                              HostGuardianServiceRole        Available
+[ ] Hyper-V                                             Hyper-V                        Available
+[ ] Web サーバー (IIS)                                  Web-Server                     Available
+    [ ] Web サーバー                                    Web-WebServer                  Available
+        [ ] HTTP 共通機能                               Web-Common-Http                Available
+            [ ] HTTP エラー                             Web-Http-Errors                Available
+            [ ] ディレクトリの参照                      Web-Dir-Browsing               Available
+            [ ] 既定のドキュメント                      Web-Default-Doc                Available
+            [ ] 静的なコンテンツ                        Web-Static-Content             Available
+            [ ] HTTP リダイレクト                       Web-Http-Redirect              Available
+            [ ] WebDAV 発行                             Web-DAV-Publishing             Available
+        [ ] セキュリティ                                Web-Security                   Available
+            [ ] 要求フィルター                          Web-Filtering                  Available
+            [ ] IIS クライアント証明書マッピング認証    Web-Cert-Auth                  Available
+            [ ] IP およびドメインの制限                 Web-IP-Security                Available
+            [ ] SSL 証明書の集中サポート                Web-CertProvider               Available
+            [ ] URL 承認                                Web-Url-Auth                   Available
+            [ ] Windows 認証                            Web-Windows-Auth               Available
+            [ ] クライアント証明書マッピング認証        Web-Client-Auth                Available
+            [ ] ダイジェスト認証                        Web-Digest-Auth                Available
+            [ ] 基本認証                                Web-Basic-Auth                 Available
+        [ ] パフォーマンス                              Web-Performance                Available
+            [ ] 静的なコンテンツの圧縮                  Web-Stat-Compression           Available
+            [ ] 動的なコンテンツの圧縮                  Web-Dyn-Compression            Available
+        [ ] 状態と診断                                  Web-Health                     Available
+            [ ] HTTP ログ                               Web-Http-Logging               Available
+            [ ] ODBC ログ                               Web-ODBC-Logging               Available
+            [ ] カスタム ログ                           Web-Custom-Logging             Available
+            [ ] トレース                                Web-Http-Tracing               Available
+            [ ] ログ ツール                             Web-Log-Libraries              Available
+            [ ] 要求の監視                              Web-Request-Monitor            Available
+        [ ] アプリケーション開発                        Web-App-Dev                    Available
+            [ ] .NET 拡張機能 3.5                       Web-Net-Ext                    Available
+            [ ] .NET 拡張機能 4.7                       Web-Net-Ext45                  Available
+            [ ] Application Initialization              Web-AppInit                    Available
+            [ ] ASP                                     Web-ASP                        Available
+            [ ] ASP.NET 3.5                             Web-Asp-Net                    Available
+            [ ] ASP.NET 4.7                             Web-Asp-Net45                  Available
+            [ ] CGI                                     Web-CGI                        Available
+            [ ] ISAPI フィルター                        Web-ISAPI-Filter               Available
+            [ ] ISAPI 拡張                              Web-ISAPI-Ext                  Available
+            [ ] WebSocket プロトコル                    Web-WebSockets                 Available
+            [ ] サーバー側インクルード                  Web-Includes                   Available
+    [ ] FTP サーバー                                    Web-Ftp-Server                 Available
+        [ ] FTP サービス                                Web-Ftp-Service                Available
+        [ ] FTP 拡張                                    Web-Ftp-Ext                    Available
+    [ ] 管理ツール                                      Web-Mgmt-Tools                 Available
+        [ ] IIS 管理コンソール                          Web-Mgmt-Console               Available
+        [ ] IIS 6 管理互換                              Web-Mgmt-Compat                Available
+            [ ] IIS 6 メタベース互換                    Web-Metabase                   Available
+            [ ] IIS 6 WMI 互換                          Web-WMI                        Available
+            [ ] IIS 6 スクリプト ツール                 Web-Lgcy-Scripting             Available
+            [ ] IIS 6 管理コンソール                    Web-Lgcy-Mgmt-Console          Available
+        [ ] IIS 管理スクリプトおよびツール              Web-Scripting-Tools            Available
+        [ ] 管理サービス                                Web-Mgmt-Service               Available
+[ ] Windows Server Update Services                      UpdateServices                 Available
+    [ ] WID Connectivity                                UpdateServices-WidDB           Available
+    [ ] WSUS Services                                   UpdateServices-Services        Available
+    [ ] SQL Server Connectivity                         UpdateServices-DB              Available
+[ ] Windows 展開サービス                                WDS                            Available
+    [ ] トランスポート サーバー                         WDS-Transport                  Available
+    [ ] 展開サーバー                                    WDS-Deployment                 Available
+[ ] デバイス正常性構成証明                              DeviceHealthAttestat...        Available
+[ ] ネットワーク コントローラー                         NetworkController              Available
+[ ] ネットワーク ポリシーとアクセス サービス            NPAS                           Available
+[X] ファイル サービスと記憶域サービス                   FileAndStorage-Services        Installed
+    [ ] ファイル サービスおよび iSCSI サービス          File-Services                  Available
+        [ ] ファイル サーバー                           FS-FileServer                  Available
+        [ ] DFS レプリケーション                        FS-DFS-Replication             Available
+        [ ] DFS 名前空間                                FS-DFS-Namespace               Available
+        [ ] iSCSI ターゲット サーバー                   FS-iSCSITarget-Server          Available
+        [ ] iSCSI ターゲット記憶域プロバイダー (VDS ... iSCSITarget-VSS-VDS            Available
+        [ ] NFS サーバー                                FS-NFS-Service                 Available
+        [ ] データ重複除去                              FS-Data-Deduplication          Available
+        [ ] ネットワーク ファイル用 BranchCache         FS-BranchCache                 Available
+        [ ] ファイル サーバー VSS エージェント サービス FS-VSS-Agent                   Available
+        [ ] ファイル サーバー リソース マネージャー     FS-Resource-Manager            Available
+        [ ] ワーク フォルダー                           FS-SyncShareService            Available
+    [X] 記憶域サービス                                  Storage-Services               Installed
+[ ] ボリューム ライセンス認証サービス                   VolumeActivation               Available
+[ ] リモート アクセス                                   RemoteAccess                   Available
+    [ ] DirectAccess および VPN (RAS)                   DirectAccess-VPN               Available
+    [ ] Web アプリケーション プロキシ                   Web-Application-Proxy          Available
+    [ ] ルーティング                                    Routing                        Available
+[ ] リモート デスクトップ サービス                      Remote-Desktop-Services        Available
+    [ ] Remote Desktop Session Host                     RDS-RD-Server                  Available
+    [ ] リモート デスクトップ Web アクセス              RDS-Web-Access                 Available
+    [ ] リモート デスクトップ ゲートウェイ              RDS-Gateway                    Available
+    [ ] リモート デスクトップ ライセンス                RDS-Licensing                  Available
+    [ ] リモート デスクトップ仮想化ホスト               RDS-Virtualization             Available
+    [ ] リモート デスクトップ接続ブローカー             RDS-Connection-Broker          Available
+[ ] 印刷とドキュメント サービス                         Print-Services                 Available
+    [ ] プリント サーバー                               Print-Server                   Available
+    [ ] LPD サービス                                    Print-LPD-Service              Available
+    [ ] インターネット印刷                              Print-Internet                 Available
+[ ] .NET Framework 3.5 Features                         NET-Framework-Features         Available
+    [ ] .NET Framework 3.5 (.NET 2.0 および 3.0 を含む) NET-Framework-Core               Removed
+    [ ] HTTP アクティブ化                               NET-HTTP-Activation            Available
+    [ ] 非 HTTP アクティブ化                            NET-Non-HTTP-Activ             Available
+[X] .NET Framework 4.7 Features                         NET-Framework-45-Fea...        Installed
+    [X] .NET Framework 4.7                              NET-Framework-45-Core          Installed
+    [ ] ASP.NET 4.7                                     NET-Framework-45-ASPNET        Available
+    [X] WCF サービス                                    NET-WCF-Services45             Installed
+        [ ] HTTP アクティブ化                           NET-WCF-HTTP-Activat...        Available
+        [ ] TCP アクティブ化                            NET-WCF-TCP-Activati...        Available
+        [X] TCP ポート共有                              NET-WCF-TCP-PortShar...        Installed
+        [ ] メッセージ キュー (MSMQ) アクティブ化       NET-WCF-MSMQ-Activat...        Available
+        [ ] 名前付きパイプのアクティブ化                NET-WCF-Pipe-Activat...        Available
+[ ] BitLocker ドライブ暗号化                            BitLocker                      Available
+[ ] BitLocker ネットワーク ロック解除                   BitLocker-NetworkUnlock        Available
+[ ] BranchCache                                         BranchCache                    Available
+[ ] Containers                                          Containers                     Available
+[ ] Data Center Bridging                                Data-Center-Bridging           Available
+[ ] Direct Play                                         Direct-Play                    Available
+[ ] Fabric Management 用の VM シールド ツール           FabricShieldedTools            Available
+[ ] Host Guardian Hyper-V サポート                      HostGuardian                   Available
+[ ] HTTP プロキシを経由した RPC                         RPC-over-HTTP-Proxy            Available
+[ ] I/O サービス品質                                    DiskIo-QoS                     Available
+[ ] IIS ホスト可能な Web コア                           Web-WHC                        Available
+[ ] IP アドレス管理 (IPAM) サーバー                     IPAM                           Available
+[ ] iSNS サーバー サービス                              ISNS                           Available
+[ ] LPR ポート モニター                                 LPR-Port-Monitor               Available
+[ ] Management OData IIS 拡張機能                       ManagementOdata                Available
+[ ] MultiPoint Connector                                MultiPoint-Connector           Available
+    [ ] MultiPoint Connector サービス                   MultiPoint-Connector...        Available
+    [ ] MultiPoint マネージャーおよび MultiPoint ダ...  MultiPoint-Tools               Available
+[ ] NFS クライアント                                    NFS-Client                     Available
+[ ] RAS Connection Manager Administration Kit (CMAK)    CMAK                           Available
+[ ] RDC (Remote Differential Compression)               RDC                            Available
+[ ] Simple TCP/IP Services                              Simple-TCPIP                   Available
+[ ] SMB 1.0/CIFS File Sharing Support                   FS-SMB1                        Available
+    [ ] SMB 1.0/CIFS Client                             FS-SMB1-CLIENT                 Available
+    [ ] SMB 1.0/CIFS Server                             FS-SMB1-SERVER                 Available
+[ ] SMB 帯域幅の制限                                    FS-SMBBW                       Available
+[ ] SMTP サーバー                                       SMTP-Server                    Available
+[ ] SNMP サービス                                       SNMP-Service                   Available
+    [ ] WMI SNMP プロバイダー                           SNMP-WMI-Provider              Available
+[ ] Storage Migration Service                           SMS                            Available
+[ ] Storage Migration Service Proxy                     SMS-Proxy                      Available
+[X] System Data Archiver                                System-DataArchiver            Installed
+[ ] System Insights                                     System-Insights                Available
+[ ] Telnet Client                                       Telnet-Client                  Available
+[ ] TFTP Client                                         TFTP-Client                    Available
+[ ] WebDAV リダイレクター                               WebDAV-Redirector              Available
+[X] Windows Defender Antivirus                          Windows-Defender               Installed
+[ ] Windows Identity Foundation 3.5                     Windows-Identity-Fou...        Available
+[ ] Windows Internal Database                           Windows-Internal-Dat...        Available
+[X] Windows PowerShell                                  PowerShellRoot                 Installed
+    [X] Windows PowerShell 5.1                          PowerShell                     Installed
+    [ ] Windows PowerShell 2.0 エンジン                 PowerShell-V2                    Removed
+    [ ] Windows PowerShell Desired State Configurati... DSC-Service                    Available
+    [X] Windows PowerShell ISE                          PowerShell-ISE                 Installed
+    [ ] Windows PowerShell Web Access                   WindowsPowerShellWeb...        Available
+[ ] Windows Search サービス                             Search-Service                 Available
+[ ] Windows Server バックアップ                         Windows-Server-Backup          Available
+[ ] Windows Server 移行ツール                           Migration                      Available
+[ ] Windows Subsystem for Linux                         Microsoft-Windows-Su...        Available
+[ ] Windows TIFF IFilter                                Windows-TIFF-IFilter           Available
+[ ] Windows プロセス アクティブ化サービス               WAS                            Available
+    [ ] プロセス モデル                                 WAS-Process-Model              Available
+    [ ] .NET 環境 3.5                                   WAS-NET-Environment            Available
+    [ ] 構成 API                                        WAS-Config-APIs                Available
+[ ] Windows 生体認証フレームワーク                      Biometric-Framework            Available
+[ ] Windows 標準ベースの記憶域の管理                    WindowsStorageManage...        Available
+[ ] WinRM IIS 拡張機能                                  WinRM-IIS-Ext                  Available
+[ ] WINS サーバー                                       WINS                           Available
+[X] WoW64 サポート                                      WoW64-Support                  Installed
+[X] XPS Viewer                                          XPS-Viewer                     Installed
+[ ] インターネット印刷クライアント                      Internet-Print-Client          Available
+[ ] グループ ポリシーの管理                             GPMC                           Available
+[ ] セットアップおよびブート イベント収集               Setup-and-Boot-Event...        Available
+[ ] ソフトウェア ロード バランサー                      SoftwareLoadBalancer           Available
+[ ] ネットワーク仮想化                                  NetworkVirtualization          Available
+[ ] ネットワーク負荷分散                                NLB                            Available
+[ ] バックグラウンド インテリジェント転送サービス (B... BITS                           Available
+    [ ] IIS サーバー拡張機能                            BITS-IIS-Ext                   Available
+    [ ] コンパクト サーバー                             BITS-Compact-Server            Available
+[ ] ピア名解決プロトコル                                PNRP                           Available
+[ ] フェールオーバー クラスタリング                     Failover-Clustering            Available
+[ ] マルチパス I/O                                      Multipath-IO                   Available
+[ ] メッセージ キュー                                   MSMQ                           Available
+    [ ] メッセージ キュー サービス                      MSMQ-Services                  Available
+        [ ] メッセージ キュー サーバー                  MSMQ-Server                    Available
+        [ ] HTTP サポート                               MSMQ-HTTP-Support              Available
+        [ ] ディレクトリ サービス統合                   MSMQ-Directory                 Available
+        [ ] マルチキャスト サポート                     MSMQ-Multicasting              Available
+        [ ] メッセージ キュー トリガー                  MSMQ-Triggers                  Available
+        [ ] ルーティング サービス                       MSMQ-Routing                   Available
+    [ ] メッセージ キュー DCOM プロキシ                 MSMQ-DCOM                      Available
+[ ] メディア ファンデーション                           Server-Media-Foundation        Available
+[ ] リモート アシスタンス                               Remote-Assistance              Available
+[ ] リモート サーバー管理ツール                         RSAT                           Available
+    [ ] 機能管理ツール                                  RSAT-Feature-Tools             Available
+        [ ] SMTP サーバー ツール                        RSAT-SMTP                      Available
+        [ ] BitLocker ドライブ暗号化管理ユーティリティ  RSAT-Feature-Tools-B...        Available
+            [ ] BitLocker ドライブ暗号化ツール          RSAT-Feature-Tools-B...        Available
+            [ ] BitLocker 回復パスワード ビューアー     RSAT-Feature-Tools-B...        Available
+        [ ] BITS サーバー拡張ツール                     RSAT-Bits-Server               Available
+        [ ] DataCenterBridging LLDP ツール              RSAT-DataCenterBridg...        Available
+        [ ] IP アドレス管理 (IPAM) クライアント         IPAM-Client-Feature            Available
+        [ ] SNMP ツール                                 RSAT-SNMP                      Available
+        [ ] Storage Migration Service Tools             RSAT-SMS                       Available
+        [ ] System Insights Module for Windows Power... RSAT-System-Insights           Available
+        [ ] Windows PowerShell 用記憶域レプリカ モジ... RSAT-Storage-Replica           Available
+        [ ] WINS サーバー ツール                        RSAT-WINS                      Available
+        [ ] シールドされた VM のツール                  RSAT-Shielded-VM-Tools         Available
+        [ ] ネットワーク負荷分散ツール                  RSAT-NLB                       Available
+        [ ] フェールオーバー クラスタリング ツール      RSAT-Clustering                Available
+            [ ] Windows PowerShell 用のフェールオー...  RSAT-Clustering-Powe...        Available
+            [ ] フェールオーバー クラスター管理ツール   RSAT-Clustering-Mgmt           Available
+            [ ] フェールオーバー クラスター コマンド... RSAT-Clustering-CmdI...        Available
+            [ ] フェールオーバー クラスター自動化サ...  RSAT-Clustering-Auto...        Available
+    [ ] 役割管理ツール                                  RSAT-Role-Tools                Available
+        [ ] AD DS および AD LDS ツール                  RSAT-AD-Tools                  Available
+            [ ] AD DS ツール                            RSAT-ADDS                      Available
+                [ ] Active Directory 管理センター       RSAT-AD-AdminCenter            Available
+                [ ] AD DS スナップインおよびコマンド... RSAT-ADDS-Tools                Available
+            [ ] AD LDS Snap-Ins and Command-Line Tools  RSAT-ADLDS                     Available
+            [ ] Windows PowerShell の Active Directo... RSAT-AD-PowerShell             Available
+        [ ] Hyper-V 管理ツール                          RSAT-Hyper-V-Tools             Available
+            [ ] Hyper-V GUI 管理ツール                  Hyper-V-Tools                  Available
+            [ ] Windows PowerShell 用 Hyper-V モジュ... Hyper-V-PowerShell             Available
+        [ ] Windows Server Update Services ツール       UpdateServices-RSAT            Available
+            [ ] API と PowerShell コマンドレット        UpdateServices-API             Available
+            [ ] ユーザー インターフェイス管理コンソール UpdateServices-UI              Available
+        [ ] リモート デスクトップ サービス ツール       RSAT-RDS-Tools                 Available
+            [ ] リモート デスクトップ ゲートウェイ ...  RSAT-RDS-Gateway               Available
+            [ ] リモート デスクトップ ライセンス ツール RDS-Licensing-UI               Available
+            [ ] リモート デスクトップ ライセンス診断... RSAT-RDS-Licensing-D...        Available
+        [ ] Active Directory Rights Management サー...  RSAT-ADRMS                     Available
+        [ ] Active Directory 証明書サービス ツール      RSAT-ADCS                      Available
+            [ ] オンライン レスポンダー ツール          RSAT-Online-Responder          Available
+            [ ] 証明機関管理ツール                      RSAT-ADCS-Mgmt                 Available
+        [ ] DHCP サーバー ツール                        RSAT-DHCP                      Available
+        [ ] DNS サーバー ツール                         RSAT-DNS-Server                Available
+        [ ] FAX サーバー ツール                         RSAT-Fax                       Available
+        [ ] Network Controller Management Tools         RSAT-NetworkController         Available
+        [ ] Windows 展開サービス ツール                 WDS-AdminPack                  Available
+        [ ] ネットワーク ポリシーとアクセス サービス... RSAT-NPAS                      Available
+        [ ] ファイル サービス ツール                    RSAT-File-Services             Available
+            [ ] DFS 管理ツール                          RSAT-DFS-Mgmt-Con              Available
+            [ ] ネットワーク ファイル システム管理ツ... RSAT-NFS-Admin                 Available
+            [ ] ファイル サーバー リソース マネージ...  RSAT-FSRM-Mgmt                 Available
+        [ ] ボリューム ライセンス認証ツール             RSAT-VA-Tools                  Available
+        [ ] リモート アクセス管理ツール                 RSAT-RemoteAccess              Available
+            [ ] Windows PowerShell 用のリモート アク... RSAT-RemoteAccess-Po...        Available
+            [ ] リモート アクセス GUI ツールとコマン... RSAT-RemoteAccess-Mgmt         Available
+        [ ] 印刷とドキュメント サービス ツール          RSAT-Print-Services            Available
+[ ] ワイヤレス LAN サービス                             Wireless-Networking            Available
+[ ] 拡張記憶域                                          EnhancedStorage                Available
+[ ] 記憶域レプリカ                                      Storage-Replica                Available
+[ ] 高品質な Windows オーディオ ビデオ エクスペリエンス qWave                          Available
+
+
+PS C:\Users\Administrator> Get-WindowsFeature Hyper-V,Containers
+
+Display Name                                            Name                       Install State
+------------                                            ----                       -------------
+[ ] Hyper-V                                             Hyper-V                        Available
+[ ] Containers                                          Containers                     Available
+
+
+PS C:\Users\Administrator> Get-Module
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Manifest   3.1.0.0    Microsoft.PowerShell.Management     {Add-Computer, Add-Content, Checkpoint-Computer, Clear-Con...
+Manifest   3.1.0.0    Microsoft.PowerShell.Utility        {Add-Member, Add-Type, Clear-Variable, Compare-Object...}
+Script     2.0.0      PSReadline                          {Get-PSReadLineKeyHandler, Get-PSReadLineOption, Remove-PS...
+Script     2.0.0.0    ServerManager                       {Get-WindowsFeature, Install-WindowsFeature, Uninstall-Win...
+
+
+PS C:\Users\Administrator> Get-Module -ListAvailable
+
+
+    ディレクトリ: C:\Program Files\WindowsPowerShell\Modules
+
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0.1      Microsoft.PowerShell.Operation.V... {Get-OperationValidation, Invoke-OperationValidation}
+Binary     1.0.0.1    PackageManagement                   {Find-Package, Get-Package, Get-PackageProvider, Get-Packa...
+Script     3.4.0      Pester                              {Describe, Context, It, Should...}
+Script     1.0.0.1    PowerShellGet                       {Install-Module, Find-Module, Save-Module, Update-Module...}
+Script     2.0.0      PSReadline                          {Get-PSReadLineKeyHandler, Set-PSReadLineKeyHandler, Remov...
+
+
+    ディレクトリ: C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Manifest   1.0.0.0    AppBackgroundTask                   {Disable-AppBackgroundTaskDiagnosticLog, Enable-AppBackgro...
+Manifest   2.0.0.0    AppLocker                           {Get-AppLockerFileInformation, Get-AppLockerPolicy, New-Ap...
+Manifest   1.0.0.0    AppvClient                          {Add-AppvClientConnectionGroup, Add-AppvClientPackage, Add...
+Manifest   2.0.1.0    Appx                                {Add-AppxPackage, Get-AppxPackage, Get-AppxPackageManifest...
+Manifest   1.0        BestPractices                       {Get-BpaModel, Get-BpaResult, Invoke-BpaModel, Set-BpaResult}
+Manifest   2.0.0.0    BitsTransfer                        {Add-BitsFile, Complete-BitsTransfer, Get-BitsTransfer, Re...
+Manifest   1.0.0.0    BranchCache                         {Add-BCDataCacheExtension, Clear-BCCache, Disable-BC, Disa...
+Manifest   1.0.0.0    CimCmdlets                          {Get-CimAssociatedInstance, Get-CimClass, Get-CimInstance,...
+Manifest   1.0        ConfigCI                            {Get-SystemDriver, New-CIPolicyRule, New-CIPolicy, Get-CIP...
+Manifest   1.0        Defender                            {Get-MpPreference, Set-MpPreference, Add-MpPreference, Rem...
+Manifest   1.0.1.0    DeliveryOptimization                {Get-DeliveryOptimizationStatus, Get-DeliveryOptimizationP...
+Manifest   1.0.0.0    DirectAccessClientComponents        {Disable-DAManualEntryPointSelection, Enable-DAManualEntry...
+Script     3.0        Dism                                {Add-AppxProvisionedPackage, Add-WindowsDriver, Add-Window...
+Manifest   1.0.0.0    DnsClient                           {Resolve-DnsName, Clear-DnsClientCache, Get-DnsClient, Get...
+Manifest   1.0.0.0    EventTracingManagement              {Start-EtwTraceSession, New-EtwTraceSession, Get-EtwTraceS...
+Manifest   2.0.0.0    International                       {Get-WinDefaultInputMethodOverride, Set-WinDefaultInputMet...
+Manifest   1.0.0.0    iSCSI                               {Get-IscsiTargetPortal, New-IscsiTargetPortal, Remove-Iscs...
+Manifest   2.0.0.0    IscsiTarget                         {Add-ClusteriSCSITargetServerRole, Add-IscsiVirtualDiskTar...
+Script     1.0.0.0    ISE                                 {New-IseSnippet, Import-IseSnippet, Get-IseSnippet}
+Manifest   1.0.0.0    Kds                                 {Add-KdsRootKey, Get-KdsRootKey, Test-KdsRootKey, Set-KdsC...
+Manifest   1.0.1.0    Microsoft.PowerShell.Archive        {Compress-Archive, Expand-Archive}
+Manifest   3.0.0.0    Microsoft.PowerShell.Diagnostics    {Get-WinEvent, Get-Counter, Import-Counter, Export-Counter...
+Manifest   3.0.0.0    Microsoft.PowerShell.Host           {Start-Transcript, Stop-Transcript}
+Manifest   1.0.0.0    Microsoft.PowerShell.LocalAccounts  {Add-LocalGroupMember, Disable-LocalUser, Enable-LocalUser...
+Manifest   3.1.0.0    Microsoft.PowerShell.Management     {Add-Content, Clear-Content, Clear-ItemProperty, Join-Path...
+Script     1.0        Microsoft.PowerShell.ODataUtils     Export-ODataEndpointProxy
+Manifest   3.0.0.0    Microsoft.PowerShell.Security       {Get-Acl, Set-Acl, Get-PfxCertificate, Get-Credential...}
+Manifest   3.1.0.0    Microsoft.PowerShell.Utility        {Format-List, Format-Custom, Format-Table, Format-Wide...}
+Manifest   3.0.0.0    Microsoft.WSMan.Management          {Disable-WSManCredSSP, Enable-WSManCredSSP, Get-WSManCredS...
+Manifest   1.0        MMAgent                             {Disable-MMAgent, Enable-MMAgent, Set-MMAgent, Get-MMAgent...
+Manifest   1.0.0.0    MsDtc                               {New-DtcDiagnosticTransaction, Complete-DtcDiagnosticTrans...
+Manifest   2.0.0.0    NetAdapter                          {Disable-NetAdapter, Disable-NetAdapterBinding, Disable-Ne...
+Manifest   1.0.0.0    NetConnection                       {Get-NetConnectionProfile, Set-NetConnectionProfile}
+Manifest   1.0.0.0    NetDiagnostics                      Get-NetView
+Manifest   1.0.0.0    NetEventPacketCapture               {New-NetEventSession, Remove-NetEventSession, Get-NetEvent...
+Manifest   2.0.0.0    NetLbfo                             {Add-NetLbfoTeamMember, Add-NetLbfoTeamNic, Get-NetLbfoTea...
+Manifest   1.0.0.0    NetNat                              {Get-NetNat, Get-NetNatExternalAddress, Get-NetNatStaticMa...
+Manifest   2.0.0.0    NetQos                              {Get-NetQosPolicy, Set-NetQosPolicy, Remove-NetQosPolicy, ...
+Manifest   2.0.0.0    NetSecurity                         {Get-DAPolicyChange, New-NetIPsecAuthProposal, New-NetIPse...
+Manifest   1.0.0.0    NetSwitchTeam                       {New-NetSwitchTeam, Remove-NetSwitchTeam, Get-NetSwitchTea...
+Manifest   1.0.0.0    NetTCPIP                            {Get-NetIPAddress, Get-NetIPInterface, Get-NetIPv4Protocol...
+Manifest   1.0.0.0    NetworkConnectivityStatus           {Get-DAConnectionStatus, Get-NCSIPolicyConfiguration, Rese...
+Manifest   1.0.0.0    NetworkSwitchManager                {Disable-NetworkSwitchEthernetPort, Enable-NetworkSwitchEt...
+Manifest   1.0.0.0    NetworkTransition                   {Add-NetIPHttpsCertBinding, Disable-NetDnsTransitionConfig...
+Manifest   1.0        NFS                                 {Get-NfsMappedIdentity, Get-NfsNetgroup, Install-NfsMappin...
+Manifest   1.0.0.0    PcsvDevice                          {Get-PcsvDevice, Start-PcsvDevice, Stop-PcsvDevice, Restar...
+Binary     1.0.0.0    PersistentMemory                    {Get-PmemDisk, Get-PmemPhysicalDevice, Get-PmemUnusedRegio...
+Manifest   1.0.0.0    PKI                                 {Add-CertificateEnrollmentPolicyServer, Export-Certificate...
+Manifest   1.0.0.0    PlatformIdentifier                  Get-PlatformIdentifier
+Manifest   1.0.0.0    PnpDevice                           {Get-PnpDevice, Get-PnpDeviceProperty, Enable-PnpDevice, D...
+Manifest   1.1        PrintManagement                     {Add-Printer, Add-PrinterDriver, Add-PrinterPort, Get-Prin...
+Binary     1.0.11     ProcessMitigations                  {Get-ProcessMitigation, Set-ProcessMitigation, ConvertTo-P...
+Manifest   1.1        PSDesiredStateConfiguration         {Set-DscLocalConfigurationManager, Start-DscConfiguration,...
+Script     1.0.0.0    PSDiagnostics                       {Disable-PSTrace, Disable-PSWSManCombinedTrace, Disable-WS...
+Binary     1.1.0.0    PSScheduledJob                      {New-JobTrigger, Add-JobTrigger, Remove-JobTrigger, Get-Jo...
+Manifest   2.0.0.0    PSWorkflow                          {New-PSWorkflowExecutionOption, New-PSWorkflowSession, nwsn}
+Manifest   1.0.0.0    PSWorkflowUtility                   Invoke-AsWorkflow
+Manifest   2.0.0.0    RemoteDesktop                       {Get-RDCertificate, Set-RDCertificate, New-RDCertificate, ...
+Manifest   1.0.0.0    ScheduledTasks                      {Get-ScheduledTask, Set-ScheduledTask, Register-ScheduledT...
+Manifest   2.0.0.0    SecureBoot                          {Confirm-SecureBootUEFI, Set-SecureBootUEFI, Get-SecureBoo...
+Manifest   1.0.0.0    SecurityCmdlets                     {Backup-SecurityPolicy, Restore-SecurityPolicy, Backup-Aud...
+Script     1.0.0.0    ServerCore                          {Get-DisplayResolution, Set-DisplayResolution}
+Script     2.0.0.0    ServerManager                       {Get-WindowsFeature, Install-WindowsFeature, Uninstall-Win...
+Cim        1.0.0.0    ServerManagerTasks                  {Get-SMCounterSample, Get-SMPerformanceCollector, Start-SM...
+Manifest   2.0.0.0    SmbShare                            {Get-SmbShare, Remove-SmbShare, Set-SmbShare, Block-SmbSha...
+Manifest   2.0.0.0    SmbWitness                          {Get-SmbWitnessClient, Move-SmbWitnessClient, gsmbw, msmbw...
+Manifest   2.0.0.0    SoftwareInventoryLogging            {Get-SilComputer, Get-SilComputerIdentity, Get-SilSoftware...
+Manifest   1.0.0.0    StartLayout                         {Export-StartLayout, Import-StartLayout, Export-StartLayou...
+Manifest   2.0.0.0    Storage                             {Add-InitiatorIdToMaskingSet, Add-PartitionAccessPath, Add...
+Manifest   1.0.0.0    StorageBusCache                     {Clear-StorageBusDisk, Disable-StorageBusCache, Disable-St...
+Manifest   2.0.0.0    TLS                                 {New-TlsSessionTicketKey, Enable-TlsSessionTicketKey, Disa...
+Manifest   1.0.0.0    TroubleshootingPack                 {Get-TroubleshootingPack, Invoke-TroubleshootingPack}
+Manifest   2.0.0.0    TrustedPlatformModule               {Get-Tpm, Initialize-Tpm, Clear-Tpm, Unblock-Tpm...}
+Binary     2.1.639.0  UEV                                 {Clear-UevConfiguration, Clear-UevAppxPackage, Restore-Uev...
+Manifest   1.0.0.0    UserAccessLogging                   {Enable-Ual, Disable-Ual, Get-Ual, Get-UalDns...}
+Manifest   2.0.0.0    VpnClient                           {Add-VpnConnection, Set-VpnConnection, Remove-VpnConnectio...
+Manifest   1.0.0.0    Wdac                                {Get-OdbcDriver, Set-OdbcDriver, Get-OdbcDsn, Add-OdbcDsn...}
+Manifest   2.0.0.0    Whea                                {Get-WheaMemoryPolicy, Set-WheaMemoryPolicy}
+Manifest   1.0.0.0    WindowsDeveloperLicense             {Get-WindowsDeveloperLicense, Unregister-WindowsDeveloperL...
+Script     1.0        WindowsErrorReporting               {Enable-WindowsErrorReporting, Disable-WindowsErrorReporti...
+Manifest   1.0.0.0    WindowsSearch                       {Get-WindowsSearchSetting, Set-WindowsSearchSetting}
+Manifest   1.0.0.0    WindowsUpdate                       Get-WindowsUpdateLog
+Manifest   1.0.0.2    WindowsUpdateProvider               {Get-WUAVersion, Get-WULastInstallationDate, Get-WULastSca...
+
+
+PS C:\Users\Administrator> Get-Module -Name DockerProvider -Repository PSGallery
+Get-Module : パラメーター名 'Repository' に一致するパラメーターが見つかりません。
+発生場所 行:1 文字:33
++ Get-Module -Name DockerProvider -Repository PSGallery
++                                 ~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Module]、ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.GetModuleCommand
+
+PS C:\Users\Administrator> Find-Module -Name DockerProvider -Repository PSGallery
+
+続行するには NuGet プロバイダーが必要です
+PowerShellGet で NuGet ベースのリポジトリを操作するには、'2.8.5.201' 以降のバージョンの NuGet
+プロバイダーが必要です。NuGet プロバイダーは 'C:\Program Files\PackageManagement\ProviderAssemblies' または
+'C:\Users\Administrator\AppData\Local\PackageManagement\ProviderAssemblies'
+に配置する必要があります。'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force' を実行して NuGet
+プロバイダーをインストールすることもできます。今すぐ PowerShellGet で NuGet
+プロバイダーをインストールしてインポートしますか?
+[Y] はい(Y)  [N] いいえ(N)  [S] 中断(S)  [?] ヘルプ (既定値は "Y"):
+
+Version    Name                                Repository           Description
+-------    ----                                ----------           -----------
+0.0.0.3    DockerProvider                      PSGallery            PowerShell module with commands for discovering,...
+
+
+PS C:\Users\Administrator> Get-Module -Name DockerProvider
+PS C:\Users\Administrator> Get-Module -Name DockerProvider -ListAvailable
+PS C:\Users\Administrator> Get-Module -ListAvailable
+
+
+    ディレクトリ: C:\Program Files\WindowsPowerShell\Modules
+
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0.1      Microsoft.PowerShell.Operation.V... {Get-OperationValidation, Invoke-OperationValidation}
+Binary     1.0.0.1    PackageManagement                   {Find-Package, Get-Package, Get-PackageProvider, Get-Packa...
+Script     3.4.0      Pester                              {Describe, Context, It, Should...}
+Script     1.0.0.1    PowerShellGet                       {Install-Module, Find-Module, Save-Module, Update-Module...}
+Script     2.0.0      PSReadline                          {Get-PSReadLineKeyHandler, Set-PSReadLineKeyHandler, Remov...
+
+
+    ディレクトリ: C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Manifest   1.0.0.0    AppBackgroundTask                   {Disable-AppBackgroundTaskDiagnosticLog, Enable-AppBackgro...
+Manifest   2.0.0.0    AppLocker                           {Get-AppLockerFileInformation, Get-AppLockerPolicy, New-Ap...
+Manifest   1.0.0.0    AppvClient                          {Add-AppvClientConnectionGroup, Add-AppvClientPackage, Add...
+Manifest   2.0.1.0    Appx                                {Add-AppxPackage, Get-AppxPackage, Get-AppxPackageManifest...
+Manifest   1.0        BestPractices                       {Get-BpaModel, Get-BpaResult, Invoke-BpaModel, Set-BpaResult}
+Manifest   2.0.0.0    BitsTransfer                        {Add-BitsFile, Complete-BitsTransfer, Get-BitsTransfer, Re...
+Manifest   1.0.0.0    BranchCache                         {Add-BCDataCacheExtension, Clear-BCCache, Disable-BC, Disa...
+Manifest   1.0.0.0    CimCmdlets                          {Get-CimAssociatedInstance, Get-CimClass, Get-CimInstance,...
+Manifest   1.0        ConfigCI                            {Get-SystemDriver, New-CIPolicyRule, New-CIPolicy, Get-CIP...
+Manifest   1.0        Defender                            {Get-MpPreference, Set-MpPreference, Add-MpPreference, Rem...
+Manifest   1.0.1.0    DeliveryOptimization                {Get-DeliveryOptimizationStatus, Get-DeliveryOptimizationP...
+Manifest   1.0.0.0    DirectAccessClientComponents        {Disable-DAManualEntryPointSelection, Enable-DAManualEntry...
+Script     3.0        Dism                                {Add-AppxProvisionedPackage, Add-WindowsDriver, Add-Window...
+Manifest   1.0.0.0    DnsClient                           {Resolve-DnsName, Clear-DnsClientCache, Get-DnsClient, Get...
+Manifest   1.0.0.0    EventTracingManagement              {Start-EtwTraceSession, New-EtwTraceSession, Get-EtwTraceS...
+Manifest   2.0.0.0    International                       {Get-WinDefaultInputMethodOverride, Set-WinDefaultInputMet...
+Manifest   1.0.0.0    iSCSI                               {Get-IscsiTargetPortal, New-IscsiTargetPortal, Remove-Iscs...
+Manifest   2.0.0.0    IscsiTarget                         {Add-ClusteriSCSITargetServerRole, Add-IscsiVirtualDiskTar...
+Script     1.0.0.0    ISE                                 {New-IseSnippet, Import-IseSnippet, Get-IseSnippet}
+Manifest   1.0.0.0    Kds                                 {Add-KdsRootKey, Get-KdsRootKey, Test-KdsRootKey, Set-KdsC...
+Manifest   1.0.1.0    Microsoft.PowerShell.Archive        {Compress-Archive, Expand-Archive}
+Manifest   3.0.0.0    Microsoft.PowerShell.Diagnostics    {Get-WinEvent, Get-Counter, Import-Counter, Export-Counter...
+Manifest   3.0.0.0    Microsoft.PowerShell.Host           {Start-Transcript, Stop-Transcript}
+Manifest   1.0.0.0    Microsoft.PowerShell.LocalAccounts  {Add-LocalGroupMember, Disable-LocalUser, Enable-LocalUser...
+Manifest   3.1.0.0    Microsoft.PowerShell.Management     {Add-Content, Clear-Content, Clear-ItemProperty, Join-Path...
+Script     1.0        Microsoft.PowerShell.ODataUtils     Export-ODataEndpointProxy
+Manifest   3.0.0.0    Microsoft.PowerShell.Security       {Get-Acl, Set-Acl, Get-PfxCertificate, Get-Credential...}
+Manifest   3.1.0.0    Microsoft.PowerShell.Utility        {Format-List, Format-Custom, Format-Table, Format-Wide...}
+Manifest   3.0.0.0    Microsoft.WSMan.Management          {Disable-WSManCredSSP, Enable-WSManCredSSP, Get-WSManCredS...
+Manifest   1.0        MMAgent                             {Disable-MMAgent, Enable-MMAgent, Set-MMAgent, Get-MMAgent...
+Manifest   1.0.0.0    MsDtc                               {New-DtcDiagnosticTransaction, Complete-DtcDiagnosticTrans...
+Manifest   2.0.0.0    NetAdapter                          {Disable-NetAdapter, Disable-NetAdapterBinding, Disable-Ne...
+Manifest   1.0.0.0    NetConnection                       {Get-NetConnectionProfile, Set-NetConnectionProfile}
+Manifest   1.0.0.0    NetDiagnostics                      Get-NetView
+Manifest   1.0.0.0    NetEventPacketCapture               {New-NetEventSession, Remove-NetEventSession, Get-NetEvent...
+Manifest   2.0.0.0    NetLbfo                             {Add-NetLbfoTeamMember, Add-NetLbfoTeamNic, Get-NetLbfoTea...
+Manifest   1.0.0.0    NetNat                              {Get-NetNat, Get-NetNatExternalAddress, Get-NetNatStaticMa...
+Manifest   2.0.0.0    NetQos                              {Get-NetQosPolicy, Set-NetQosPolicy, Remove-NetQosPolicy, ...
+Manifest   2.0.0.0    NetSecurity                         {Get-DAPolicyChange, New-NetIPsecAuthProposal, New-NetIPse...
+Manifest   1.0.0.0    NetSwitchTeam                       {New-NetSwitchTeam, Remove-NetSwitchTeam, Get-NetSwitchTea...
+Manifest   1.0.0.0    NetTCPIP                            {Get-NetIPAddress, Get-NetIPInterface, Get-NetIPv4Protocol...
+Manifest   1.0.0.0    NetworkConnectivityStatus           {Get-DAConnectionStatus, Get-NCSIPolicyConfiguration, Rese...
+Manifest   1.0.0.0    NetworkSwitchManager                {Disable-NetworkSwitchEthernetPort, Enable-NetworkSwitchEt...
+Manifest   1.0.0.0    NetworkTransition                   {Add-NetIPHttpsCertBinding, Disable-NetDnsTransitionConfig...
+Manifest   1.0        NFS                                 {Get-NfsMappedIdentity, Get-NfsNetgroup, Install-NfsMappin...
+Manifest   1.0.0.0    PcsvDevice                          {Get-PcsvDevice, Start-PcsvDevice, Stop-PcsvDevice, Restar...
+Binary     1.0.0.0    PersistentMemory                    {Get-PmemDisk, Get-PmemPhysicalDevice, Get-PmemUnusedRegio...
+Manifest   1.0.0.0    PKI                                 {Add-CertificateEnrollmentPolicyServer, Export-Certificate...
+Manifest   1.0.0.0    PlatformIdentifier                  Get-PlatformIdentifier
+Manifest   1.0.0.0    PnpDevice                           {Get-PnpDevice, Get-PnpDeviceProperty, Enable-PnpDevice, D...
+Manifest   1.1        PrintManagement                     {Add-Printer, Add-PrinterDriver, Add-PrinterPort, Get-Prin...
+Binary     1.0.11     ProcessMitigations                  {Get-ProcessMitigation, Set-ProcessMitigation, ConvertTo-P...
+Manifest   1.1        PSDesiredStateConfiguration         {Set-DscLocalConfigurationManager, Start-DscConfiguration,...
+Script     1.0.0.0    PSDiagnostics                       {Disable-PSTrace, Disable-PSWSManCombinedTrace, Disable-WS...
+Binary     1.1.0.0    PSScheduledJob                      {New-JobTrigger, Add-JobTrigger, Remove-JobTrigger, Get-Jo...
+Manifest   2.0.0.0    PSWorkflow                          {New-PSWorkflowExecutionOption, New-PSWorkflowSession, nwsn}
+Manifest   1.0.0.0    PSWorkflowUtility                   Invoke-AsWorkflow
+Manifest   2.0.0.0    RemoteDesktop                       {Get-RDCertificate, Set-RDCertificate, New-RDCertificate, ...
+Manifest   1.0.0.0    ScheduledTasks                      {Get-ScheduledTask, Set-ScheduledTask, Register-ScheduledT...
+Manifest   2.0.0.0    SecureBoot                          {Confirm-SecureBootUEFI, Set-SecureBootUEFI, Get-SecureBoo...
+Manifest   1.0.0.0    SecurityCmdlets                     {Backup-SecurityPolicy, Restore-SecurityPolicy, Backup-Aud...
+Script     1.0.0.0    ServerCore                          {Get-DisplayResolution, Set-DisplayResolution}
+Script     2.0.0.0    ServerManager                       {Get-WindowsFeature, Install-WindowsFeature, Uninstall-Win...
+Cim        1.0.0.0    ServerManagerTasks                  {Get-SMCounterSample, Get-SMPerformanceCollector, Start-SM...
+Manifest   2.0.0.0    SmbShare                            {Get-SmbShare, Remove-SmbShare, Set-SmbShare, Block-SmbSha...
+Manifest   2.0.0.0    SmbWitness                          {Get-SmbWitnessClient, Move-SmbWitnessClient, gsmbw, msmbw...
+Manifest   2.0.0.0    SoftwareInventoryLogging            {Get-SilComputer, Get-SilComputerIdentity, Get-SilSoftware...
+Manifest   1.0.0.0    StartLayout                         {Export-StartLayout, Import-StartLayout, Export-StartLayou...
+Manifest   2.0.0.0    Storage                             {Add-InitiatorIdToMaskingSet, Add-PartitionAccessPath, Add...
+Manifest   1.0.0.0    StorageBusCache                     {Clear-StorageBusDisk, Disable-StorageBusCache, Disable-St...
+Manifest   2.0.0.0    TLS                                 {New-TlsSessionTicketKey, Enable-TlsSessionTicketKey, Disa...
+Manifest   1.0.0.0    TroubleshootingPack                 {Get-TroubleshootingPack, Invoke-TroubleshootingPack}
+Manifest   2.0.0.0    TrustedPlatformModule               {Get-Tpm, Initialize-Tpm, Clear-Tpm, Unblock-Tpm...}
+Binary     2.1.639.0  UEV                                 {Clear-UevConfiguration, Clear-UevAppxPackage, Restore-Uev...
+Manifest   1.0.0.0    UserAccessLogging                   {Enable-Ual, Disable-Ual, Get-Ual, Get-UalDns...}
+Manifest   2.0.0.0    VpnClient                           {Add-VpnConnection, Set-VpnConnection, Remove-VpnConnectio...
+Manifest   1.0.0.0    Wdac                                {Get-OdbcDriver, Set-OdbcDriver, Get-OdbcDsn, Add-OdbcDsn...}
+Manifest   2.0.0.0    Whea                                {Get-WheaMemoryPolicy, Set-WheaMemoryPolicy}
+Manifest   1.0.0.0    WindowsDeveloperLicense             {Get-WindowsDeveloperLicense, Unregister-WindowsDeveloperL...
+Script     1.0        WindowsErrorReporting               {Enable-WindowsErrorReporting, Disable-WindowsErrorReporti...
+Manifest   1.0.0.0    WindowsSearch                       {Get-WindowsSearchSetting, Set-WindowsSearchSetting}
+Manifest   1.0.0.0    WindowsUpdate                       Get-WindowsUpdateLog
+Manifest   1.0.0.2    WindowsUpdateProvider               {Get-WUAVersion, Get-WULastInstallationDate, Get-WULastSca...
+
+
+PS C:\Users\Administrator> Find-Package -Name docker -ProviderName DockerProvider
+Find-Package : パッケージ プロバイダー (DockerProvider) が見つかりません。
+発生場所 行:1 文字:1
++ Find-Package -Name docker -ProviderName DockerProvider
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (Microsoft.Power...ets.FindPackage:FindPackage) [Find-Package]、Exceptio
+    n
+    + FullyQualifiedErrorId : UnknownProviders,Microsoft.PowerShell.PackageManagement.Cmdlets.FindPackage
+
+PS C:\Users\Administrator> Install-Module -Name DockerProvider -Repository PSGallery
+
+信頼されていないリポジトリ
+信頼されていないリポジトリからモジュールをインストールしようとしています。このリポジトリを信頼する場合は、Set-PSReposit
+ory コマンドレットを実行して、リポジトリの InstallationPolicy の値を変更してください。'PSGallery'
+からモジュールをインストールしますか?
+[Y] はい(Y)  [A] すべて続行(A)  [N] いいえ(N)  [L] すべて無視(L)  [S] 中断(S)  [?] ヘルプ (既定値は "N"): Y
+PS C:\Users\Administrator> Get-Module -Name DockerProvider
+PS C:\Users\Administrator> Get-Module -Name DockerProvider -ListAvailable
+
+
+    ディレクトリ: C:\Program Files\WindowsPowerShell\Modules
+
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     0.0.0.3    DockerProvider
+
+
+PS C:\Users\Administrator> Find-Package -Name docker -ProviderName DockerProvider
+
+Name                           Version          Source           Summary
+----                           -------          ------           -------
+Docker                         17.06.2-ee-16    Docker           Docker for Windows Server 2016
+
+
+PS C:\Users\Administrator> Find-Package -Name docker -ProviderName DockerProvider -RequiredVersion Preview
+
+Name                           Version          Source           Summary
+----                           -------          ------           -------
+Docker                         17.10.0-ee-pr... Docker           Docker Enterprise Edition for Windows Server 2016 (...
+
+
+PS C:\Users\Administrator> Install-Package -Name docker -ProviderName DockerProvider -RequiredVersion Preview
+
+パッケージは、信頼済みとマークされていないパッケージ ソースから取得されています。
+'Docker' からソフトウェアをアンインストールしますか?
+[Y] はい(Y)  [A] すべて続行(A)  [N] いいえ(N)  [L] すべて無視(L)  [S] 中断(S)  [?] ヘルプ (既定値は "N"): Y
+警告: A restart is required to enable the one or more features. Please restart your machine.
+
+Name                           Version          Source           Summary
+----                           -------          ------           -------
+Docker                         17.10.0-ee-pr... Docker           Docker Enterprise Edition for Windows Server 2016 (...
+
+
+PS C:\Users\Administrator> Get-WindowsFeature Hyper-V,Containers
+
+Display Name                                            Name                       Install State
+------------                                            ----                       -------------
+[X] Hyper-V                                             Hyper-V                        Installed
+[X] Containers                                          Containers                     Installed
+
+
+PS C:\Users\Administrator> Restart-Computer
