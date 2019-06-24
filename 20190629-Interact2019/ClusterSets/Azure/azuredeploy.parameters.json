@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+      "location": {
+          "value": "japaneast"
+      },
+      "virtualMachineName": {
+          "value": "LabVM"
+      },
+      "virtualMachineSize": {
+          "value": "Standard_E32s_v3"
+      },
+      "adminUsername": {
+          "value": "LabAdmin"
+      },
+      "virtualNetworkName": {
+          "value": "Lab-vnet"
+      },
+      "networkInterfaceName": {
+          "value": "LabVM-NIC"
+      },
+      "networkSecurityGroupName": {
+          "value": "LabVM-NSG"
+      },
+      "adminPassword": {
+          "value": null
+      },
+      "diagnosticsStorageAccountName": {
+          "value": "Labdiagstor"
+      },
+      "diagnosticsStorageAccountType": {
+          "value": "Standard_LRS"
+      },
+      "diagnosticsStorageAccountId": {
+          "value": "Microsoft.Storage/storageAccounts/Labdiagstor"
+      },
+      "addressPrefix": {
+          "value": "10.0.0.0/24"
+      },
+      "subnetName": {
+          "value": "default"
+      },
+      "subnetPrefix": {
+          "value": "10.0.0.0/24"
+      },
+      "publicIpAddressName": {
+          "value": "LabVM-PublicIP"
+      },
+      "publicIpAddressType": {
+          "value": "Dynamic"
+      },
+      "publicIpAddressSku": {
+          "value": "Basic"
+      },
+      "autoShutdownStatus": {
+          "value": "Disabled"
+      },
+      "autoShutdownNotificationStatus": {
+          "value": "Disabled"
+      }
+  }
+}
