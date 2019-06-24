@@ -4,7 +4,14 @@ if (!(Get-Module -Name Az -ListAvailable))
 }
 
 Connect-AzAccount
-Get-AzSubscription
+$s = Get-AzSubscription
+if ($s.Count -gt 1)
+{
+    $s = $s | Where-Object { $_.Name -like "*Sponsorship" }
+    if ($null -ne $s) {
+        Set-AzContext -Subscription $s
+    }
+}
 # 複数のサブスクリプションが存在する場合、リソースを作成するサブスクリプションを指定
 #$context = Get-AzSubscription -SubscriptionId 00000000-0000-0000-0000-000000000000
 #Set-AzContext $context
