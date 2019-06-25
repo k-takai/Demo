@@ -1,4 +1,4 @@
-﻿$LabConfig = @{ DomainAdminName = 'LabAdmin'; AdminPassword = 'Passw0rd!!!!'; Prefix = 'Lab-'; SwitchName = 'LabSwitch'; DCEdition='4'; PullServerDC=$false; Internet=$false; AdditionalNetworksConfig=@(); VMs=@() }
+﻿$LabConfig = @{ DomainAdminName = 'LabAdmin'; AdminPassword = 'Passw0rd!!!!'; DomainNetbiosName = "corp"; DomainName = "corp.example.jp"; Prefix = 'Lab-'; SwitchName = 'LabSwitch'; DCEdition = '4'; PullServerDC = $false; Internet = $false; AdditionalNetworksConfig = @(); VMs = @() }
 #Management cluster
 1..3 | ForEach-Object { $VMNames = "Mgmt"; $LABConfig.VMs += @{ VMName = "$VMNames$_"; Configuration = 'Simple'; ParentVHD = 'Win2019Core_G2.vhdx'; MemoryStartupBytes = 4GB } }
 #HyperConverged Clusters (member clusters)
