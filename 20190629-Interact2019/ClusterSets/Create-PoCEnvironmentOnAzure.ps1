@@ -23,4 +23,8 @@ New-AzResourceGroup -Name $rgName -Location $region
 $templateUri = "https://raw.githubusercontent.com/k-takai/Demo/master/20190629-Interact2019/ClusterSets/Azure/azuredeploy.json"
 New-AzResourceGroupDeployment -Name ClusterSetsLab -ResourceGroupName $rgName -TemplateUri $templateUri -Verbose
 
+Write-Host "Please configure Network Security Group."
+Write-Host "Press enter to continue..."
+Read-Host | Out-Null
+
 mstsc /v:((Get-AzPublicIpAddress -ResourceGroupName $rgName).IpAddress)
