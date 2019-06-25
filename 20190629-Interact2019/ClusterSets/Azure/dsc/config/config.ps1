@@ -51,7 +51,7 @@ Configuration Config {
                 Test-Path -Path D:\scripts.zip
             }
             GetScript = {
-                @{Ensure =
+                @{ Ensure =
                     if (Test-Path -Path D:\scripts.zip) {
                         'Present'
                     } else {
@@ -68,11 +68,11 @@ Configuration Config {
                 Expand-Archive D:\scripts.zip -DestinationPath D:\Lab -Force
             }
             TestScript = {
-                !("1_Prereq.ps1","2_CreateParentDisks.ps1","3_Deploy.ps1","Cleanup.ps1","LabConfig.ps1","PostDeploy.ps1","PrepCluster.ps1" | ForEach-Object { Test-Path -Path D:\Lab\$_ }).contains($false)
+                !("1_Prereq.ps1","2_CreateParentDisks.ps1","3_Deploy.ps1","Cleanup.ps1","LabConfig.ps1","PostDeploy.ps1","01_PrepCluster.ps1","02_CreateMgmtCluster.ps1","03_CreateClusterSet.ps1","04_OperateClusterSet.ps1" | ForEach-Object { Test-Path -Path D:\Lab\$_ }).contains($false)
             }
             GetScript = {
-                @{Ensure =
-                    if (!("1_Prereq.ps1","2_CreateParentDisks.ps1","3_Deploy.ps1","Cleanup.ps1","LabConfig.ps1","PostDeploy.ps1","PrepCluster.ps1" | ForEach-Object { Test-Path -Path D:\Lab\$_ }).contains($false))
+                @{ Ensure =
+                    if (!("1_Prereq.ps1","2_CreateParentDisks.ps1","3_Deploy.ps1","Cleanup.ps1","LabConfig.ps1","PostDeploy.ps1","01_PrepCluster.ps1","02_CreateMgmtCluster.ps1","03_CreateClusterSet.ps1","04_OperateClusterSet.ps1" | ForEach-Object { Test-Path -Path D:\Lab\$_ }).contains($false))
                     {
                         'Present'
                     } else {
@@ -93,7 +93,7 @@ Configuration Config {
                 Test-Path -Path D:\Lab\17763.379.190312-0539.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_en-us.iso
             }
             GetScript = {
-                @{Ensure =
+                @{ Ensure =
                     if (Test-Path -Path D:\Lab\17763.379.190312-0539.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_en-us.iso) {
                         'Present'
                     } else {
@@ -114,7 +114,7 @@ Configuration Config {
                 Test-Path -Path D:\Lab\windows10.0-kb4501371-x64.msu
             }
             GetScript = {
-                @{Ensure =
+                @{ Ensure =
                     if (Test-Path -Path D:\Lab\windows10.0-kb4501371-x64.msu) {
                         'Present'
                     } else {
@@ -135,7 +135,7 @@ Configuration Config {
                 Test-Path -Path D:\Lab\windows10.0-kb4504369-x64.msu
             }
             GetScript = {
-                @{Ensure =
+                @{ Ensure =
                     if (Test-Path -Path D:\Lab\windows10.0-kb4504369-x64.msu) {
                         'Present'
                     } else {
