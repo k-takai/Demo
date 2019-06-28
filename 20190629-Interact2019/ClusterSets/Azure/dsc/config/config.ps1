@@ -146,6 +146,27 @@ Configuration Config {
             DependsOn = "[Script]CreateFolder"
         }
 
+        Script DownloadWAC
+        {
+            SetScript = {
+                [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+                Invoke-WebRequest -UseBasicParsing -Uri http://aka.ms/WACDownload -OutFile D:\Lab\WindowsAdminCenter.msi
+            }
+            TestScript = {
+                Test-Path -Path D:\Lab\WindowsAdminCenter.msi
+            }
+            GetScript = {
+                @{ Ensure =
+                    if (Test-Path -Path D:\Lab\WindowsAdminCenter.msi) {
+                        'Present'
+                    } else {
+                        'Absent'
+                    }
+                }
+            }
+            DependsOn = "[Script]CreateFolder"
+        }
+
         LocalConfigurationManager 
         {
             RebootNodeIfNeeded = $true

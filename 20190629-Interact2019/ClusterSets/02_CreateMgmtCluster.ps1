@@ -2,6 +2,15 @@
 
 # Execute on DC.
 
+# check Failover Cluster Manager
+
+Get-Cluster -Name Cluster1
+Get-Cluster -Name Cluster2
+Get-Cluster -Name Cluster3
+Get-Cluster -Name Cluster1 | Get-ClusterNode
+Get-Cluster -Name Cluster2 | Get-ClusterNode
+Get-Cluster -Name Cluster3 | Get-ClusterNode
+
 $ClusterName = "MgmtCluster"
 $ClusterIP = "10.0.0.220"
 $ClusterNodes = 1..3 | ForEach-Object {

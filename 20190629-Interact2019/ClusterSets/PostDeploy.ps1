@@ -10,4 +10,5 @@ Copy-Item -Path $PSScriptRoot\02_CreateMgmtCluster.ps1 -ToSession $s -Destinatio
 Copy-Item -Path $PSScriptRoot\03_CreateClusterSet.ps1 -ToSession $s -Destination C:\Users\$($LabConfig.DomainAdminName)\Desktop\03_CreateClusterSet.ps1
 Copy-Item -Path $PSScriptRoot\04_OperateClusterSet.ps1 -ToSession $s -Destination C:\Users\$($LabConfig.DomainAdminName)\Desktop\04_OperateClusterSet.ps1
 Copy-Item -Path $PSScriptRoot\ParentDisks\Win2019Core_G2.vhdx -ToSession $s -Destination C:\Users\$($LabConfig.DomainAdminName)\Documents\Win2019Core_G2.vhdx
+Copy-Item -Path $PSScriptRoot\WindowsAdminCenter.msi -ToSession $s -Destination C:\Users\$($LabConfig.DomainAdminName)\Downloads\WindowsAdminCenter.msi
 Remove-PSSession $s

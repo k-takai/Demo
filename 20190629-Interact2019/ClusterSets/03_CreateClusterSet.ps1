@@ -2,7 +2,7 @@
 
 # Execute on DC.
 
-$CsMaster = "ClusterSetMaster"
+$CsMaster = "CSM"
 New-ClusterSet -name $CsMaster -NamespaceRoot "CSRoot-SOFS" -CimSession "MgmtCluster" -StaticAddress "10.0.0.221"
 
 Add-ClusterSetMember -ClusterName Cluster1 -CimSession $CsMaster -InfraSOFSName CL1-SOFS

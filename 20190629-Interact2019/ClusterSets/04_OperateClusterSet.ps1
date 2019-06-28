@@ -2,8 +2,10 @@
 
 # Execute on DC.
 
-$CsMaster = "ClusterSetMaster"
+$CsMaster = "CSM"
 $RootSOFS = "\\CSRoot-SOFS"
+
+Get-ClusterSet -CimSession $CsMaster
 
 # List all cluster set nodes
 Get-ClusterSet -CimSession $CsMaster | Get-Cluster | Get-ClusterNode
@@ -17,6 +19,7 @@ Get-ClusterSetMember -CimSession $CsMaster
 # Move all VMs to Cluster Set namespace
 $VMs = Get-VM -CimSession (Get-ClusterSetNode -CimSession $CsMaster).Name
 $VMs | Stop-VM
+# check vhdx path
 
 # Remove VMs from cluster resources
 foreach ($VM in $VMs)
@@ -37,7 +40,7 @@ foreach ($VM in $VMs)
 }
 
 # Import again, but replace path to \\CSRoot-SOFS
-Invoke-Command -ComputerName (Get-ClusterSetMemberber -CimSession $CsMaster).ClusterName -ScriptBlock {
+Invoke-Command -ComputerName (Get-ClusterSetMember -CimSession $CsMaster).ClusterName -ScriptBlock {
     Get-ChildItem C:\ClusterStorage -Recurse | Where-Object {
         ($_.extension -eq '.vmcx' -and $_.directory -like '*Virtual Machines*') -or ($_.extension -eq '.xml' -and $_.directory -like '*Virtual Machines*')
     } | ForEach-Object -Process {
@@ -57,6 +60,7 @@ foreach ($ClusterSetNode in $ClusterSetNodes)
         $VMs | Start-VM
     }
 }
+# re-check vhdx path
 
 # Register all existing VMs
 Get-ClusterSetMember -CimSession $CsMaster | Register-ClusterSetVM -RegisterAll
@@ -64,11 +68,13 @@ Get-ClusterSetMember -CimSession $CsMaster | Register-ClusterSetVM -RegisterAll
 # Create fault domains
 New-ClusterSetFaultDomain -Name FD1 -FdType Logical -CimSession $CsMaster -MemberCluster CLUSTER1,CLUSTER2 -Description "fault domain 1 - Cluster1 and Cluster2"
 New-ClusterSetFaultDomain -Name FD2 -FdType Logical -CimSession $CsMaster -MemberCluster CLUSTER3 -Description "fault domain 2 - Cluster3"
+Get-ClusterSetFaultDomain -CimSession $CsMaster
 
 # Create Availability Set
 $AvailabilitySetName = "AvailabilitySet"
 $FaultDomainNames = (Get-ClusterSetFaultDomain -CimSession $CsMaster).FDName
 New-ClusterSetAvailabilitySet -Name $AvailabilitySetName -FdType Logical -CimSession $CsMaster -ParticipantName $FaultDomainNames
+Get-ClusterSetAvailabilitySet -CimSession $CsMaster | Format-Table -Property *
 
 # Add Availability Set to existing VMs
 Get-ClusterSetVM -CimSession $CsMaster | Set-ClusterSetVm -AvailabilitySetName $AvailabilitySetName
@@ -78,7 +84,7 @@ Get-ClusterSetVM -CimSession $CsMaster
 Get-ClusterSetVM -CimSession $CsMaster | Format-Table VMName,AvailabilitySet,FaultDomain,UpdateDomain
 
 # Identify node to create VM
-$memoryinMB = 1GB
+$memoryinMB = 1024
 $cpucount = 1
 $AS = Get-ClusterSetAvailabilitySet -CimSession $CsMaster
 Get-ClusterSetOptimalNodeForVM -CimSession $CsMaster -VMMemory $memoryinMB -VMVirtualCoreCount $cpucount -VMCpuReservation 10 -AvailabilitySet $AS

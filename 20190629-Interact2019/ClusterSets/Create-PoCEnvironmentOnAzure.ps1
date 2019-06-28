@@ -17,6 +17,11 @@ if ($s.Count -gt 1)
 #Set-AzContext $context
 
 $rgName = "Int19-ClsSets"
+Get-AzResourceGroup $rgName -ErrorAction SilentlyContinue
+if ($null -eq $Error[0])
+{
+    $rgName = $rgName + "-" + (Get-Random -Maximum 100).ToString()
+}
 $region = "Japan East"
 New-AzResourceGroup -Name $rgName -Location $region
 
