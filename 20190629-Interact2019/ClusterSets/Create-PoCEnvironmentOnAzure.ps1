@@ -17,8 +17,8 @@ if ($s.Count -gt 1)
 #Set-AzContext $context
 
 $rgName = "Int19-ClsSets"
-Get-AzResourceGroup $rgName -ErrorAction SilentlyContinue
-if ($null -eq $Error[0])
+$r = Get-AzResourceGroup $rgName -ErrorAction SilentlyContinue
+if ($null -ne $r)
 {
     $rgName = $rgName + "-" + (Get-Random -Maximum 100).ToString()
 }
