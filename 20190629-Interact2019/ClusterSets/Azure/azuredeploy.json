@@ -179,7 +179,7 @@
                       "version": "latest"
                   },
                   "osDisk": {
-                      "createOption": "fromImage",
+                      "createOption": "FromImage",
                       "managedDisk": {
                           "storageAccountType": "Premium_LRS"
                       }
@@ -199,7 +199,7 @@
       {
           "name": "[concat('shutdown-computevm-', parameters('virtualMachineName'))]",
           "type": "Microsoft.DevTestLab/schedules",
-          "apiVersion": "2017-04-26-preview",
+          "apiVersion": "2018-09-15",
           "location": "[parameters('location')]",
           "properties": {
               "status": "[parameters('autoShutdownStatus')]",
@@ -271,11 +271,11 @@
       },
       {
           "name": "[parameters('publicIpAddressName')]",
-          "type": "Microsoft.Network/publicIpAddresses",
+          "type": "Microsoft.Network/publicIPAddresses",
           "apiVersion": "2017-08-01",
           "location": "[parameters('location')]",
           "properties": {
-              "publicIpAllocationMethod": "[parameters('publicIpAddressType')]"
+              "publicIPAllocationMethod": "[parameters('publicIpAddressType')]"
           },
           "sku": {
               "name": "[parameters('publicIpAddressSku')]"
@@ -292,7 +292,7 @@
                       "name": "allow-rdp",
                       "properties": {
                           "priority": 1000,
-                          "protocol": "TCP",
+                          "protocol": "Tcp",
                           "access": "Allow",
                           "direction": "Inbound",
                           "sourceAddressPrefix": "10.0.0.0/24",
