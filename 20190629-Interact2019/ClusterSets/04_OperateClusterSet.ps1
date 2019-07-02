@@ -74,7 +74,7 @@ Get-ClusterSetFaultDomain -CimSession $CsMaster
 $AvailabilitySetName = "AvailabilitySet"
 $FaultDomainNames = (Get-ClusterSetFaultDomain -CimSession $CsMaster).FDName
 New-ClusterSetAvailabilitySet -Name $AvailabilitySetName -FdType Logical -CimSession $CsMaster -ParticipantName $FaultDomainNames
-Get-ClusterSetAvailabilitySet -CimSession $CsMaster | Format-Table -Property *
+Get-ClusterSetAvailabilitySet -CimSession $CsMaster | Format-List -Property *
 
 # Add Availability Set to existing VMs
 Get-ClusterSetVM -CimSession $CsMaster | Set-ClusterSetVm -AvailabilitySetName $AvailabilitySetName
