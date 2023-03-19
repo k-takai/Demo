@@ -1,0 +1,3 @@
+Worker process waiting to finish the consistency operation.
+Worker process is running consistency for assignment SCUGJ34WindowsBaseConfig, solution type inguest
+Worker process exiting with exit code : 0

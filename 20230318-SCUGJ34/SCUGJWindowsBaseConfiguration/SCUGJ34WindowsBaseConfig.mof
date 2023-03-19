@@ -1,0 +1,20 @@
+
+instance of SCUGJFile as $SCUGJFile1ref
+{
+content = "Welcome to SCUGJ34 !!\nCustom DSC Resource: SCUGJFile";
+ ResourceID = "[SCUGJFile]WelcomeFile";
+ ensure = "Present";
+ ModuleName = "Scugj34SampleDscResource";
+ SourceInfo = "C:\\Users\\takai\\Documents\\PowerShell\\SCUGJWindowsBaseConfiguration.ps1::4::9::SCUGJFile";
+ ModuleVersion = "0.0.1";
+ path = "C:\\SCUGJ34-Demo.txt";
+ ConfigurationName = "SCUGJWindowsBaseConfiguration";
+};
+
+instance of OMI_ConfigurationDocument
+{
+ Version="2.0.0";
+ MinimumCompatibleVersion = "1.0.0";
+ CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
+ Name="SCUGJWindowsBaseConfiguration";
+};

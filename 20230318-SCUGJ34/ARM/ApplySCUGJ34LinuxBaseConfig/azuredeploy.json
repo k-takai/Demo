@@ -1,0 +1,66 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "type": "String",
+            "metadata": {
+                "description": "Azure region for the deployment, resource group and resources."
+            }
+        },
+        "guestConfigurationName": {
+            "type": "String",
+            "metadata": {
+                "description": "Name of the machine configuration resource."
+            }
+        },
+        "version": {
+            "type": "String",
+            "metadata": {
+                "description": "Version of the machine configuration resource."
+            }
+        },
+        "machine": {
+            "type": "String",
+            "metadata": {
+                "description": "Virtual Machine the configuration is associated to."
+            }
+        },
+        "uri": {
+            "type": "String",
+            "metadata": {
+                "description": "Uri of the machine configuration resource."
+            }
+        },
+        "hash": {
+            "type": "String",
+            "metadata": {
+                "description": "Hash of the machine configuration resource."
+            }
+        },
+        "type": {
+            "type": "String",
+            "metadata": {
+                "description": "Type of the machine configuration resource."
+            }
+        }
+    },
+    "resources": [
+        {
+            "type": "Microsoft.HybridCompute/machines/providers/guestConfigurationAssignments",
+            "apiVersion": "2018-11-20",
+            "name": "[concat(parameters('machine'), '/Microsoft.GuestConfiguration/', parameters('guestConfigurationName'))]",
+            "location": "[parameters('location')]",
+            "properties": {
+                "context": "Azure policy",
+                "guestConfiguration": {
+                    "name": "[parameters('guestConfigurationName')]",
+                    "version": "[parameters('version')]",
+                    "contentUri": "[parameters('uri')]",
+                    "contentHash": "[parameters('hash')]",
+                    "assignmentType": "[parameters('type')]"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,161 @@
+[2023-03-19 08:42:33.313] [PID 2912] [TID 9160] [CONSISTENCY_OPERATIONS] [INFO] [604a2eaa-0f82-43d1-b18d-e452d844cea9] Starting consistency for SCUGJ34WindowsBaseConfig
+[2023-03-19 08:42:33.313] [PID 2912] [TID 9160] [CONSISTENCY_OPERATIONS] [INFO] [604a2eaa-0f82-43d1-b18d-e452d844cea9] Starting run_consistency for configuration : 'SCUGJ34WindowsBaseConfig', Compliance status : 'Pending', solution type : 'inguest'
+[2023-03-19 08:42:33.313] [PID 2912] [TID 9160] [CONSISTENCY_OPERATIONS] [INFO] [Starting test_dsc_configuration in run_consistency for configuration '{0}'] SCUGJ34WindowsBaseConfig
+[2023-03-19 08:42:33.313] [PID 2912] [TID 9160] [CONSISTENCY_OPERATIONS] [INFO] [604a2eaa-0f82-43d1-b18d-e452d844cea9] Calling test_dsc_configuration for SCUGJ34WindowsBaseConfig.
+[2023-03-19 08:42:33.316] [PID 2912] [TID 9160] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job {FD41ECFA-C631-11ED-B4DE-000D3A10E6CE} : LCM has released the resource state cache.
+[2023-03-19 08:42:33.317] [PID 2912] [TID 9160] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job {FD41ECFA-C631-11ED-B4DE-000D3A10E6CE} : Reading the file content from DSCEngineCache.mof
+[2023-03-19 08:42:33.317] [PID 2912] [TID 9160] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job {FD41ECFA-C631-11ED-B4DE-000D3A10E6CE} : Reading agent registration information from ('C:\Users\takai\Documents\PowerShell\Modules\GuestConfiguration\4.3.0\gcworker\\GC\PullServiceRegistrationInfo\RegistrationInfo.txt')
+[2023-03-19 08:42:33.317] [PID 2912] [TID 9160] [Engine] [INFO] [604a2eaa-0f82-43d1-b18d-e452d844cea9] Testing configuration : configuration_name = SCUGJ34WindowsBaseConfig, file_path = 
+[2023-03-19 08:42:33.318] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Operation Test-DscConfiguration started by user sid null from computer null.
+[2023-03-19 08:42:33.318] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Deleting file from C:\Users\takai\Documents\PowerShell\Modules\GuestConfiguration\4.3.0\gcworker\Configurations\SCUGJ34WindowsBaseConfig\\DSCEngineCache.mof
+[2023-03-19 08:42:33.326] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Getting Metaconfiguration details.
+[2023-03-19 08:42:33.326] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Getting Metaconfiguration details.
+[2023-03-19 08:42:33.327] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Getting Metaconfiguration details.
+[2023-03-19 08:42:33.327] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Function CallTestConfiguration started with parameters 
+ 	 DataSize: 0 
+ 	 Flags: 0 
+ 	 Execution Mode: 0 
+[2023-03-19 08:42:33.328] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Displaying messages from the engine:
+	 WMI channel 1 
+	 ResourceID:  
+	 Message : [ws2022ae-d01]: LCM:  [ Start  Test     ]      
+[2023-03-19 08:42:33.328] [PID 2912] [TID 8452] [DSCEngine] [WARNING] [00000000-0000-0000-0000-000000000000] [C:\__w\1\s\src\dsc\engine\ConfigurationManager\LocalConfigManagerHelper.c:4615] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Displaying messages from built-in DSC resources:
+	 WMI channel 0 
+	 ResourceID:  
+	 Message : [ws2022ae-d01]:                            [] The TEST operation will be carried against a pending configuration since the latest configuration has not converged yet.
+[2023-03-19 08:42:33.330] [PID 2912] [TID 8452] [DSCEngine] [WARNING] [00000000-0000-0000-0000-000000000000] [C:\__w\1\s\src\dsc\engine\EngineHelper\EngineHelper.c:2435] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : WarningMessage The TEST operation will be carried against a pending configuration since the latest configuration has not converged yet.
+[2023-03-19 08:42:33.330] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Applying configuration from C:\Users\takai\Documents\PowerShell\Modules\GuestConfiguration\4.3.0\gcworker\Configurations\SCUGJ34WindowsBaseConfig\\Pending.mof.
+[2023-03-19 08:42:33.330] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Getting Metaconfiguration details.
+[2023-03-19 08:42:33.331] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Module manager is loading instance document from location C:\Users\takai\Documents\PowerShell\Modules\GuestConfiguration\4.3.0\gcworker\Configurations\SCUGJ34WindowsBaseConfig\\Pending.mof
+[2023-03-19 08:42:33.339] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : The base folder of native resources 'C:\Users\takai\Documents\PowerShell\Modules\GuestConfiguration\4.3.0\gcworker\Configurations\SCUGJ34WindowsBaseConfig\Modules\DscNativeResources\' does not exist.
+[2023-03-19 08:42:33.339] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Getting Metaconfiguration details.
+[2023-03-19 08:42:33.359] [PID 2912] [TID 8452] [PSPROVIDER] [INFO] [00000000-0000-0000-0000-000000000000] InitializeCoreCLR(). intializeCoreClr() is successful
+[2023-03-19 08:42:33.360] [PID 2912] [TID 8452] [PSPROVIDER] [INFO] [00000000-0000-0000-0000-000000000000] CreateDelegate(). successfully created managed delegate for assemblyName:Microsoft.Windows.DSC.CoreConfProviders, Culture=neutral, PublicKeyToken=31bf3856ad364e35 className:Microsoft.PowerShell.DesiredStateConfiguration.Internal.DscPluginManagedEntryWrapper methodName:InitPlugin
+[2023-03-19 08:42:33.362] [PID 2912] [TID 8452] [PSPROVIDER] [INFO] [00000000-0000-0000-0000-000000000000] GetFunctionPtrs(). returnValue:0
+[2023-03-19 08:42:34.828] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Validating instance document.
+[2023-03-19 08:42:34.828] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Parsing the configuration to apply.
+[2023-03-19 08:42:34.828] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Method SendConfigurationApply started with parameters 
+ 	 Class name: OMI_ConfigurationDocument 
+ 	 Resource ID:  
+ 	 Flags: 150994944 
+ 	 Execution Mode: 12582912 
+ 	 DSC resource Namespace: null 
+[2023-03-19 08:42:34.829] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Resolving Dependencies inside the configuration document.
+[2023-03-19 08:42:34.829] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Resource execution sequence :: [SCUGJFile]WelcomeFile.
+[2023-03-19 08:42:34.829] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Setting resources in order. Number of resources: 1
+[2023-03-19 08:42:34.830] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : LCM has released the resource state cache.
+[2023-03-19 08:42:34.830] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : LCM has resized the resource state cache.
+[2023-03-19 08:42:34.831] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Activity LCM
+CurrentOperation [ws2022ae-d01] Test
+StatusDescription Testing Configuration
+ PercentComplete 100
+ SecondsRemaining 1
+[2023-03-19 08:42:34.831] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Displaying messages from the engine:
+	 WMI channel 1 
+	 ResourceID: [SCUGJFile]WelcomeFile 
+	 Message : [ws2022ae-d01]: LCM:  [ Start  Resource ]  [[SCUGJFile]WelcomeFile]  
+[2023-03-19 08:42:34.831] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Getting a registration instance for SCUGJFile
+[2023-03-19 08:42:34.832] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Moving the resource [SCUGJFile]WelcomeFile of class SCUGJFile to desired state.
+[2023-03-19 08:42:34.832] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Getting Metaconfiguration details.
+[2023-03-19 08:42:34.832] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Executing operations for PS DSC resource SCUGJFile with resource name [SCUGJFile]WelcomeFile
+[2023-03-19 08:42:34.833] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Method Exec_PSProvider started with parameters 
+ 	 Class name: SCUGJFile 
+ 	 Resource ID: [SCUGJFile]WelcomeFile 
+ 	 Flags: 150994944 
+ 	 Execution Mode: 12582912 
+ 	 DSC resource Namespace: null 
+[2023-03-19 08:42:34.833] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Displaying messages from the engine:
+	 WMI channel 1 
+	 ResourceID: [SCUGJFile]WelcomeFile 
+	 Message : [ws2022ae-d01]: LCM:  [ Start  Test     ]  [[SCUGJFile]WelcomeFile]  
+[2023-03-19 08:42:35.142] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Displaying messages from the engine:
+	 WMI channel 1 
+	 ResourceID: [SCUGJFile]WelcomeFile 
+	 Message : [ws2022ae-d01]: LCM:  [ End    Test     ]  [[SCUGJFile]WelcomeFile] True in 0.3080 seconds.
+[2023-03-19 08:42:35.142] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Displaying messages from the engine:
+	 WMI channel 1 
+	 ResourceID: [SCUGJFile]WelcomeFile 
+	 Message : [ws2022ae-d01]: LCM:  [ End    Resource ]  [[SCUGJFile]WelcomeFile]  
+[2023-03-19 08:42:35.143] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Displaying messages from the engine:
+	 WMI channel 1 
+	 ResourceID:  
+	 Message : [ws2022ae-d01]: LCM:  [ End    Test     ]     Completed processing test operation. The operation returned True.
+[2023-03-19 08:42:35.143] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Method CallTestConfiguration ended successfully
+[2023-03-19 08:42:35.144] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Displaying messages from the engine:
+	 WMI channel 1 
+	 ResourceID: LCM 
+	 Message : [ws2022ae-d01]: LCM:  [ End    Test     ]    in  1.8250 seconds.
+[2023-03-19 08:42:35.144] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Operation Test-DscConfiguration completed successfully.
+[2023-03-19 08:42:35.144] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Getting Metaconfiguration details.
+[2023-03-19 08:42:35.144] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Deleting file from C:\Users\takai\Documents\PowerShell\Modules\GuestConfiguration\4.3.0\gcworker\Configurations\SCUGJ34WindowsBaseConfig\\DSCEngineCache.mof
+[2023-03-19 08:42:35.146] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Method CU_TestConfiguration ended successfully
+[2023-03-19 08:42:35.146] [PID 2912] [TID 9160] [Engine] [INFO] [604a2eaa-0f82-43d1-b18d-e452d844cea9] Test configuration completed successfully.
+[2023-03-19 08:42:35.154] [PID 2912] [TID 9160] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job  : LCM has released the resource state cache.
+[2023-03-19 08:42:35.154] [PID 2912] [TID 9160] [CONSISTENCY_OPERATIONS] [INFO] [Starting get_dsc_configuration in run_consistency for configuration '{0}'] SCUGJ34WindowsBaseConfig
+[2023-03-19 08:42:35.155] [PID 2912] [TID 9160] [CONSISTENCY_OPERATIONS] [INFO] [604a2eaa-0f82-43d1-b18d-e452d844cea9] Calling get_dsc_configuration for SCUGJ34WindowsBaseConfig.
+[2023-03-19 08:42:35.166] [PID 2912] [TID 9160] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job {FD41ECFB-C631-11ED-B4DE-000D3A10E6CE} : LCM has released the resource state cache.
+[2023-03-19 08:42:35.166] [PID 2912] [TID 9160] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job {FD41ECFB-C631-11ED-B4DE-000D3A10E6CE} : Reading the file content from DSCEngineCache.mof
+[2023-03-19 08:42:35.166] [PID 2912] [TID 9160] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job {FD41ECFB-C631-11ED-B4DE-000D3A10E6CE} : Reading agent registration information from ('C:\Users\takai\Documents\PowerShell\Modules\GuestConfiguration\4.3.0\gcworker\\GC\PullServiceRegistrationInfo\RegistrationInfo.txt')
+[2023-03-19 08:42:35.167] [PID 2912] [TID 9160] [Engine] [INFO] [604a2eaa-0f82-43d1-b18d-e452d844cea9] Getting configuration : configuration_name = SCUGJ34WindowsBaseConfig, file_path = ''
+[2023-03-19 08:42:35.167] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Operation Get-DscConfiguration started by user sid null from computer null.
+[2023-03-19 08:42:35.167] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Deleting file from C:\Users\takai\Documents\PowerShell\Modules\GuestConfiguration\4.3.0\gcworker\Configurations\SCUGJ34WindowsBaseConfig\\DSCEngineCache.mof
+[2023-03-19 08:42:35.171] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Getting Metaconfiguration details.
+[2023-03-19 08:42:35.171] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Getting Metaconfiguration details.
+[2023-03-19 08:42:35.172] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Getting Metaconfiguration details.
+[2023-03-19 08:42:35.172] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Function CallGetConfiguration started with parameters 
+ 	 DataSize: 0 
+ 	 Flags: 0 
+ 	 Execution Mode: 0 
+[2023-03-19 08:42:35.173] [PID 2912] [TID 8452] [DSCEngine] [WARNING] [00000000-0000-0000-0000-000000000000] [C:\__w\1\s\src\dsc\engine\ConfigurationManager\LocalConfigManagerHelper.c:4615] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Displaying messages from built-in DSC resources:
+	 WMI channel 0 
+	 ResourceID:  
+	 Message : [ws2022ae-d01]:                            [] The GET operation will be carried against a pending configuration since the latest configuration has not converged yet.
+[2023-03-19 08:42:35.173] [PID 2912] [TID 8452] [DSCEngine] [WARNING] [00000000-0000-0000-0000-000000000000] [C:\__w\1\s\src\dsc\engine\EngineHelper\EngineHelper.c:2435] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : WarningMessage The GET operation will be carried against a pending configuration since the latest configuration has not converged yet.
+[2023-03-19 08:42:35.174] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Module manager is loading instance document from location C:\Users\takai\Documents\PowerShell\Modules\GuestConfiguration\4.3.0\gcworker\Configurations\SCUGJ34WindowsBaseConfig\\Get.mof
+[2023-03-19 08:42:35.178] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : The base folder of native resources 'C:\Users\takai\Documents\PowerShell\Modules\GuestConfiguration\4.3.0\gcworker\Configurations\SCUGJ34WindowsBaseConfig\Modules\DscNativeResources\' does not exist.
+[2023-03-19 08:42:35.178] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Getting Metaconfiguration details.
+[2023-03-19 08:42:35.178] [PID 2912] [TID 8452] [PSPROVIDER] [INFO] [00000000-0000-0000-0000-000000000000] GetFunctionPtrs(). returnValue:0
+[2023-03-19 08:42:35.221] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Validating instance document.
+[2023-03-19 08:42:35.221] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Displaying messages from the engine:
+	 WMI channel 1 
+	 ResourceID:  
+	 Message : [ws2022ae-d01]: LCM:  [ Start  Get      ]      
+[2023-03-19 08:42:35.222] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Getting Metaconfiguration details.
+[2023-03-19 08:42:35.222] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Executing GET for PS DSC resource SCUGJFile with resource name [SCUGJFile]WelcomeFile
+[2023-03-19 08:42:35.222] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Method Get_PSProvider started with parameters 
+ 	 Class name: SCUGJFile 
+ 	 Resource ID: [SCUGJFile]WelcomeFile 
+ 	 Flags: 0 
+ 	 Execution Mode: 12582912 
+ 	 DSC resource Namespace: null 
+[2023-03-19 08:42:35.305] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Displaying messages from the engine:
+	 WMI channel 1 
+	 ResourceID: [SCUGJFile]WelcomeFile 
+	 Message : [ws2022ae-d01]: LCM:  [ End    Get      ]  [[SCUGJFile]WelcomeFile]  in 0.0830 seconds.
+[2023-03-19 08:42:35.306] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Method Get_PSProvider ended successfully
+[2023-03-19 08:42:35.306] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Deleting file from C:\Users\takai\Documents\PowerShell\Modules\GuestConfiguration\4.3.0\gcworker\Configurations\SCUGJ34WindowsBaseConfig\\Get.mof
+[2023-03-19 08:42:35.306] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Method CallGetConfiguration ended successfully
+[2023-03-19 08:42:35.307] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Displaying messages from the engine:
+	 WMI channel 1 
+	 ResourceID: LCM 
+	 Message : [ws2022ae-d01]: LCM:  [ End    Get      ]    in  0.1350 seconds.
+[2023-03-19 08:42:35.307] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Operation Get-DscConfiguration completed successfully.
+[2023-03-19 08:42:35.308] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Getting Metaconfiguration details.
+[2023-03-19 08:42:35.308] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Deleting file from C:\Users\takai\Documents\PowerShell\Modules\GuestConfiguration\4.3.0\gcworker\Configurations\SCUGJ34WindowsBaseConfig\\DSCEngineCache.mof
+[2023-03-19 08:42:35.309] [PID 2912] [TID 8452] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Method CU_GetConfiguration ended successfully
+[2023-03-19 08:42:35.309] [PID 2912] [TID 9160] [Engine] [INFO] [604a2eaa-0f82-43d1-b18d-e452d844cea9] Get configuration completed successfully.
+[2023-03-19 08:42:35.312] [PID 2912] [TID 9160] [DSCEngine] [INFO] [00000000-0000-0000-0000-000000000000] Job  : LCM has released the resource state cache.
+[2023-03-19 08:42:35.313] [PID 2912] [TID 9160] [Reports] [INFO] [604a2eaa-0f82-43d1-b18d-e452d844cea9] Creating assignment report for job '604a2eaa-0f82-43d1-b18d-e452d844cea9'. Resource '[SCUGJFile]WelcomeFile' phrase 'The file was expected to be: Present
+The file exists at path: C:\SCUGJ34-Demo.txt' reasoncode 'file:file:path'.
+[2023-03-19 08:42:35.313] [PID 2912] [TID 9160] [Reports] [INFO] [604a2eaa-0f82-43d1-b18d-e452d844cea9] Creating assignment report for job '604a2eaa-0f82-43d1-b18d-e452d844cea9'. Resource '[SCUGJFile]WelcomeFile' phrase 'The file was expected to contain: Welcome to SCUGJ34 !!
+Custom DSC Resource: SCUGJFile
+The file contained: Welcome to SCUGJ34 !!
+Custom DSC Resource: SCUGJFile' reasoncode 'file:file:content'.
+[2023-03-19 08:42:35.315] [PID 2912] [TID 9160] [Reports] [INFO] [604a2eaa-0f82-43d1-b18d-e452d844cea9] Sent assignment report for job '604a2eaa-0f82-43d1-b18d-e452d844cea9'. Compliance = true'
+[2023-03-19 08:42:35.315] [PID 2912] [TID 9160] [CONSISTENCY_OPERATIONS] [INFO] [604a2eaa-0f82-43d1-b18d-e452d844cea9] Completed consistency run successfully for SCUGJ34WindowsBaseConfig
+[2023-03-19 08:42:35.315] [PID 2912] [TID 9160] [GC_OPERATIONS] [INFO] [00000000-0000-0000-0000-000000000000] Agent is waiting for running operations to finish. Current active operation count is 0.
+[2023-03-19 08:42:35.316] [PID 2912] [TID 9160] [GC_OPERATIONS] [INFO] [00000000-0000-0000-0000-000000000000] All the active operations are finished.
+[2023-03-19 08:42:35.316] [PID 2912] [TID 9160] [CONSISTENCY_OPERATIONS] [INFO] [00000000-0000-0000-0000-000000000000] Deleting consistency operation context.
+[2023-03-19 08:42:35.316] [PID 2912] [TID 9160] [CONSISTENCY_OPERATIONS] [INFO] [00000000-0000-0000-0000-000000000000] Consistency operation context deleted successfully.
+[2023-03-19 08:42:35.316] [PID 2912] [TID 9160] [GCCACHE_OPERATIONS] [INFO] [00000000-0000-0000-0000-000000000000] gc cache context deleted successfully.
+[2023-03-19 08:42:35.526] [PID 2912] [TID 2096] [PSPROVIDER] [INFO] [00000000-0000-0000-0000-000000000000] Cleanup(). shutdownCoreClr() is successful

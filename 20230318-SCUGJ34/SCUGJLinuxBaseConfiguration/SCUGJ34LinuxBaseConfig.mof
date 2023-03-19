@@ -1,0 +1,20 @@
+
+instance of SCUGJFile as $SCUGJFile1ref
+{
+content = "*******************************************\n* Welcome to SCUGJ34 Linux Demo !!        *\n*                                         *\n* Notice: This is PRODUCTION environment  *\n*******************************************\nCreated by Custom DSC Resource : SCUGJFile\n";
+ ResourceID = "[SCUGJFile]WelcomeFile";
+ ensure = "Present";
+ ModuleName = "Scugj34SampleDscResource";
+ SourceInfo = "C:\\Users\\takai\\Documents\\PowerShell\\SCUGJLinuxBaseConfiguration.ps1::4::9::SCUGJFile";
+ ModuleVersion = "0.0.1";
+ path = "/etc/motd";
+ ConfigurationName = "SCUGJLinuxBaseConfiguration";
+};
+
+instance of OMI_ConfigurationDocument
+{
+ Version="2.0.0";
+ MinimumCompatibleVersion = "1.0.0";
+ CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
+ Name="SCUGJLinuxBaseConfiguration";
+};

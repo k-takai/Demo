@@ -1,0 +1,14 @@
+<GCLOG>[2023-03-19 08:42:33.329] [PID 2912] [TID 8452] [TELEMETRY DSCEngine] [WARNING] [00000000-0000-0000-0000-000000000000] [C:\__w\1\s\src\dsc\engine\ConfigurationManager\LocalConfigManagerHelper.c:4615] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Displaying messages from built-in DSC resources:
+	 WMI channel 0 
+	 ResourceID:  
+	 Message : [ws2022ae-d01]:                            [] The TEST operation will be carried against a pending configuration since the latest configuration has not converged yet.</GCLOG>
+<GCLOG>[2023-03-19 08:42:33.330] [PID 2912] [TID 8452] [TELEMETRY DSCEngine] [WARNING] [00000000-0000-0000-0000-000000000000] [C:\__w\1\s\src\dsc\engine\EngineHelper\EngineHelper.c:2435] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : WarningMessage The TEST operation will be carried against a pending configuration since the latest configuration has not converged yet.</GCLOG>
+<GCLOG>[2023-03-19 08:42:35.173] [PID 2912] [TID 8452] [TELEMETRY DSCEngine] [WARNING] [00000000-0000-0000-0000-000000000000] [C:\__w\1\s\src\dsc\engine\ConfigurationManager\LocalConfigManagerHelper.c:4615] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : Displaying messages from built-in DSC resources:
+	 WMI channel 0 
+	 ResourceID:  
+	 Message : [ws2022ae-d01]:                            [] The GET operation will be carried against a pending configuration since the latest configuration has not converged yet.</GCLOG>
+<GCLOG>[2023-03-19 08:42:35.173] [PID 2912] [TID 8452] [TELEMETRY DSCEngine] [WARNING] [00000000-0000-0000-0000-000000000000] [C:\__w\1\s\src\dsc\engine\EngineHelper\EngineHelper.c:2435] Job 604a2eaa-0f82-43d1-b18d-e452d844cea9 : WarningMessage The GET operation will be carried against a pending configuration since the latest configuration has not converged yet.</GCLOG>
+<GCLOG>[2023-03-19 08:42:35.313] [PID 2912] [TID 9160] [TELEMETRY Pull Client] [INFO] [604a2eaa-0f82-43d1-b18d-e452d844cea9] Sending assignment report for assignment 'SCUGJ34WindowsBaseConfig'</GCLOG>
+<GCLOG>[2023-03-19 08:42:35.315] [PID 2912] [TID 9160] [TELEMETRY Reports] [INFO] [604a2eaa-0f82-43d1-b18d-e452d844cea9] Sent assignment report for job '604a2eaa-0f82-43d1-b18d-e452d844cea9'. Compliance = true'</GCLOG>
+<GCLOG>[2023-03-19 08:42:35.315] [PID 2912] [TID 9160] [TELEMETRY GC_OPERATIONS] [INFO] [00000000-0000-0000-0000-000000000000] Agent is waiting for running operations to finish. Current active operation count is 0.</GCLOG>
+<GCLOG>[2023-03-19 08:42:35.316] [PID 2912] [TID 9160] [TELEMETRY GC_OPERATIONS] [INFO] [00000000-0000-0000-0000-000000000000] All the active operations are finished.</GCLOG>

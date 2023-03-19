@@ -1,0 +1,462 @@
+**********************
+PowerShell transcript start
+Start time: 20230319083905
+Username: ws2022ae-d01\takai
+RunAs User: ws2022ae-d01\takai
+Configuration Name: 
+Machine: ws2022ae-d01 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -WorkingDirectory ~
+Process ID: 8860
+PSVersion: 7.3.3
+PSEdition: Core
+GitCommitId: 7.3.3
+OS: Microsoft Windows 10.0.20348
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.10032.0, 6.0.0, 6.1.0, 6.2.0, 7.0.0, 7.1.0, 7.2.0, 7.3.3
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is .\Desktop\ps-transcript.log
+PS C:\Users\takai> $BasePath = "${env:USERPROFILE}\Documents\PowerShell"
+PS C:\Users\takai> if($PSScriptRoot -ne $null -and (Test-Path $PSScriptRoot -ErrorAction SilentlyContinue))
+{
+    Set-Location $PSScriptRoot
+} elseif (Test-Path $BasePath -ErrorAction SilentlyContinue) {
+    Set-Location $BasePath
+}
+PS C:\Users\takai\Documents\PowerShell> Get-Module
+
+ModuleType Version    PreRelease Name                                ExportedCommands
+---------- -------    ---------- ----                                ----------------
+Manifest   7.0.0.0               Microsoft.PowerShell.Host           {Start-Transcript, Stop-Transcript}
+Manifest   7.0.0.0               Microsoft.PowerShell.Management     {Add-Content, Clear-Content, Clear-Ite…
+Script     2.2.6                 PSReadLine                          {Get-PSReadLineKeyHandler, Get-PSReadL…
+
+PS C:\Users\takai\Documents\PowerShell> Get-Module -ListAvailable | Where-Object { $_.Name -in @("GuestConfiguration","PSDesiredStateConfiguration") }
+
+    Directory: C:\Users\takai\Documents\PowerShell\Modules
+
+ModuleType Version    PreRelease Name                                PSEdition ExportedCommands
+---------- -------    ---------- ----                                --------- ----------------
+Script     4.3.0                 GuestConfiguration                  Desk      {New-GuestConfigurationPacka…
+Script     3.0.0      beta1      PSDesiredStateConfiguration         Core      {Configuration, New-DscCheck…
+
+PS C:\Users\takai\Documents\PowerShell> Get-ChildItem .\
+
+    Directory: C:\Users\takai\Documents\PowerShell
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           3/16/2023  5:58 PM                Modules
+d----           3/16/2023  8:10 AM                Scripts
+-a---           3/17/2023  7:11 AM           1747 SCUGJ34-Demo01-Authoring-and-Test-Windows-Guest-Configurat
+                                                  ion.ps1
+-a---           3/17/2023  2:12 PM           1271 SCUGJ34-Demo02-01-Authoring-Linux-Guest-Configuration.ps1
+-a---           3/17/2023  2:15 PM            873 SCUGJ34-Demo02-02-Test-Linux-Guest-Configuration.sh
+-a---           3/17/2023  6:51 AM            570 SCUGJLinuxBaseConfiguration.ps1
+-a---           3/17/2023  2:23 AM            368 SCUGJWindowsBaseConfiguration.ps1
+
+PS C:\Users\takai\Documents\PowerShell> . .\SCUGJWindowsBaseConfiguration.ps1
+PS C:\Users\takai\Documents\PowerShell> SCUGJWindowsBaseConfiguration
+
+    Directory: C:\Users\takai\Documents\PowerShell\SCUGJWindowsBaseConfiguration
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           3/19/2023  8:40 AM            656 SCUGJ34WindowsBaseConfig.mof
+
+PS C:\Users\takai\Documents\PowerShell> Get-ChildItem .\SCUGJWindowsBaseConfiguration\
+
+    Directory: C:\Users\takai\Documents\PowerShell\SCUGJWindowsBaseConfiguration
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           3/19/2023  8:40 AM            656 SCUGJ34WindowsBaseConfig.mof
+
+PS C:\Users\takai\Documents\PowerShell> New-GuestConfigurationPackage -Name SCUGJ34WindowsBaseConfig -Configuration .\SCUGJWindowsBaseConfiguration\SCUGJ34WindowsBaseConfig.mof -Type AuditAndSet -Force
+
+Name                     Path
+----                     ----
+SCUGJ34WindowsBaseConfig C:\Users\takai\Documents\PowerShell\SCUGJ34WindowsBaseConfig.zip
+
+PS C:\Users\takai\Documents\PowerShell> Get-ChildItem .\
+
+    Directory: C:\Users\takai\Documents\PowerShell
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           3/16/2023  5:58 PM                Modules
+d----           3/16/2023  8:10 AM                Scripts
+d----           3/19/2023  8:40 AM                SCUGJWindowsBaseConfiguration
+-a---           3/17/2023  7:11 AM           1747 SCUGJ34-Demo01-Authoring-and-Test-Windows-Guest-Configurat
+                                                  ion.ps1
+-a---           3/17/2023  2:12 PM           1271 SCUGJ34-Demo02-01-Authoring-Linux-Guest-Configuration.ps1
+-a---           3/17/2023  2:15 PM            873 SCUGJ34-Demo02-02-Test-Linux-Guest-Configuration.sh
+-a---           3/19/2023  8:40 AM           2768 SCUGJ34WindowsBaseConfig.zip
+-a---           3/17/2023  6:51 AM            570 SCUGJLinuxBaseConfiguration.ps1
+-a---           3/17/2023  2:23 AM            368 SCUGJWindowsBaseConfiguration.ps1
+
+PS C:\Users\takai\Documents\PowerShell> Get-GuestConfigurationPackageComplianceStatus -Path .\SCUGJ34WindowsBaseConfig.zip
+
+additionalProperties : {}
+assignmentName       : SCUGJ34WindowsBaseConfig
+complianceStatus     : False
+endTime              : 3/19/2023 8:41:15 AM
+jobId                : 24904a6b-57ca-4881-8985-dccb0f6e15ea
+operationtype        : Consistency
+resources            : {@{complianceStatus=False; properties=; reasons=System.Object[]}}
+startTime            : 3/19/2023 8:41:10 AM
+
+
+PS C:\Users\takai\Documents\PowerShell> Get-ChildItem C:\
+
+    Directory: C:\
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           3/16/2023  6:21 AM                Packages
+d----            5/8/2021  8:20 AM                PerfLogs
+d-r--           3/17/2023  2:53 AM                Program Files
+d----           3/10/2023  7:14 AM                Program Files (x86)
+d----           3/10/2023  7:36 AM                Temp
+d-r--           3/15/2023  4:18 PM                Users
+d-r--           3/15/2023  2:33 PM                Windows
+d----           3/15/2023  2:35 PM                WindowsAzure
+
+PS C:\Users\takai\Documents\PowerShell> if (Test-Path C:\SCUGJ34-Demo.txt) {
+    Get-Content C:\SCUGJ34-Demo.txt
+} else {
+    "Test-Path C:\SCUGJ34-Demo.txt : $(Test-Path C:\SCUGJ34-Demo.txt)"
+}
+Test-Path C:\SCUGJ34-Demo.txt : False
+PS C:\Users\takai\Documents\PowerShell> Start-GuestConfigurationPackageRemediation -Path .\SCUGJ34WindowsBaseConfig.zip
+
+additionalProperties : {}
+assignmentName       : SCUGJ34WindowsBaseConfig
+complianceStatus     : True
+endTime              : 3/19/2023 8:41:41 AM
+jobId                : a8cbeb41-dba1-43a9-b18a-35863599ea78
+operationtype        : Consistency
+resources            : {@{complianceStatus=True; properties=; reasons=System.Object[]}}
+startTime            : 3/19/2023 8:41:38 AM
+
+
+PS C:\Users\takai\Documents\PowerShell> Get-ChildItem C:\
+
+    Directory: C:\
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           3/16/2023  6:21 AM                Packages
+d----            5/8/2021  8:20 AM                PerfLogs
+d-r--           3/17/2023  2:53 AM                Program Files
+d----           3/10/2023  7:14 AM                Program Files (x86)
+d----           3/10/2023  7:36 AM                Temp
+d-r--           3/15/2023  4:18 PM                Users
+d-r--           3/15/2023  2:33 PM                Windows
+d----           3/15/2023  2:35 PM                WindowsAzure
+-a---           3/19/2023  8:41 AM             52 SCUGJ34-Demo.txt
+
+PS C:\Users\takai\Documents\PowerShell> if (Test-Path C:\SCUGJ34-Demo.txt) {
+    Get-Content C:\SCUGJ34-Demo.txt
+} else {
+    "Test-Path C:\SCUGJ34-Demo.txt : $(Test-Path C:\SCUGJ34-Demo.txt)"
+}
+Welcome to SCUGJ34 !!
+Custom DSC Resource: SCUGJFile
+PS C:\Users\takai\Documents\PowerShell> Get-GuestConfigurationPackageComplianceStatus -Path .\SCUGJ34WindowsBaseConfig.zip
+
+additionalProperties : {}
+assignmentName       : SCUGJ34WindowsBaseConfig
+complianceStatus     : True
+endTime              : 3/19/2023 8:42:35 AM
+jobId                : 604a2eaa-0f82-43d1-b18d-e452d844cea9
+operationtype        : Consistency
+resources            : {@{complianceStatus=True; properties=; reasons=System.Object[]}}
+startTime            : 3/19/2023 8:42:33 AM
+
+
+PS C:\Users\takai\Documents\PowerShell> Get-ChildItem .\
+
+    Directory: C:\Users\takai\Documents\PowerShell
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           3/16/2023  5:58 PM                Modules
+d----           3/16/2023  8:10 AM                Scripts
+d----           3/19/2023  8:40 AM                SCUGJWindowsBaseConfiguration
+-a---           3/19/2023  8:42 AM           1766 SCUGJ34-Demo01-Authoring-and-Test-Windows-Guest-Configurat
+                                                  ion.ps1
+-a---           3/17/2023  2:12 PM           1271 SCUGJ34-Demo02-01-Authoring-Linux-Guest-Configuration.ps1
+-a---           3/17/2023  2:15 PM            873 SCUGJ34-Demo02-02-Test-Linux-Guest-Configuration.sh
+-a---           3/19/2023  8:40 AM           2768 SCUGJ34WindowsBaseConfig.zip
+-a---           3/17/2023  6:51 AM            570 SCUGJLinuxBaseConfiguration.ps1
+-a---           3/17/2023  2:23 AM            368 SCUGJWindowsBaseConfiguration.ps1
+
+PS C:\Users\takai\Documents\PowerShell> . .\SCUGJLinuxBaseConfiguration.ps1
+PS C:\Users\takai\Documents\PowerShell> SCUGJLinuxBaseConfiguration
+
+    Directory: C:\Users\takai\Documents\PowerShell\SCUGJLinuxBaseConfiguration
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           3/19/2023  8:43 AM            855 SCUGJ34LinuxBaseConfig.mof
+
+PS C:\Users\takai\Documents\PowerShell> Get-ChildItem .\SCUGJLinuxBaseConfiguration\
+
+    Directory: C:\Users\takai\Documents\PowerShell\SCUGJLinuxBaseConfiguration
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           3/19/2023  8:43 AM            855 SCUGJ34LinuxBaseConfig.mof
+
+PS C:\Users\takai\Documents\PowerShell> New-GuestConfigurationPackage -Name SCUGJ34LinuxBaseConfig -Configuration .\SCUGJLinuxBaseConfiguration\SCUGJ34LinuxBaseConfig.mof -Type AuditAndSet -Force
+
+Name                   Path
+----                   ----
+SCUGJ34LinuxBaseConfig C:\Users\takai\Documents\PowerShell\SCUGJ34LinuxBaseConfig.zip
+
+PS C:\Users\takai\Documents\PowerShell> Get-ChildItem .\
+
+    Directory: C:\Users\takai\Documents\PowerShell
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           3/16/2023  5:58 PM                Modules
+d----           3/16/2023  8:10 AM                Scripts
+d----           3/19/2023  8:43 AM                SCUGJLinuxBaseConfiguration
+d----           3/19/2023  8:40 AM                SCUGJWindowsBaseConfiguration
+-a---           3/19/2023  8:42 AM           1766 SCUGJ34-Demo01-Authoring-and-Test-Windows-Guest-Configurat
+                                                  ion.ps1
+-a---           3/17/2023  2:12 PM           1271 SCUGJ34-Demo02-01-Authoring-Linux-Guest-Configuration.ps1
+-a---           3/17/2023  2:15 PM            873 SCUGJ34-Demo02-02-Test-Linux-Guest-Configuration.sh
+-a---           3/19/2023  8:43 AM           2824 SCUGJ34LinuxBaseConfig.zip
+-a---           3/19/2023  8:40 AM           2768 SCUGJ34WindowsBaseConfig.zip
+-a---           3/17/2023  6:51 AM            570 SCUGJLinuxBaseConfiguration.ps1
+-a---           3/17/2023  2:23 AM            368 SCUGJWindowsBaseConfiguration.ps1
+
+PS C:\Users\takai\Documents\PowerShell> Get-ChildItem $env:USERPROFILE\.ssh\
+
+    Directory: C:\Users\takai\.ssh
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           2/15/2023 11:30 AM           3414 id_rsa
+-a---           3/17/2023  3:01 AM            184 known_hosts
+
+PS C:\Users\takai\Documents\PowerShell> scp -i $env:USERPROFILE\.ssh\id_rsa .\SCUGJ34LinuxBaseConfig.zip ubuntu18-dev:~/
+SCUGJ34LinuxBaseConfig.zip                                                 100% 2824     2.8KB/s   00:00
+PS C:\Users\takai\Documents\PowerShell> ssh -i .\.ssh\id_rsa takai@ubuntu18-dev
+Warning: Identity file .\.ssh\id_rsa not accessible: No such file or directory.
+Welcome to Ubuntu 18.04.6 LTS (GNU/Linux 5.4.0-1104-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun Mar 19 08:44:41 UTC 2023
+
+  System load:  0.0               Processes:           116
+  Usage of /:   7.4% of 28.89GB   Users logged in:     0
+  Memory usage: 3%                IP address for eth0: 10.0.0.5
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/azure/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+5 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+New release '20.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Fri Mar 17 07:59:32 2023 from 10.0.0.4
+takai@ubuntu18-dev:~$ cat /etc/lsb-release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=18.04
+DISTRIB_CODENAME=bionic
+DISTRIB_DESCRIPTION="Ubuntu 18.04.6 LTS"
+takai@ubuntu18-dev:~$ sudo apt update
+Hit:1 http://azure.archive.ubuntu.com/ubuntu bionic InRelease
+Get:2 http://azure.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:3 http://azure.archive.ubuntu.com/ubuntu bionic-backports InRelease [83.3 kB]
+Get:4 http://azure.archive.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Hit:5 https://packages.microsoft.com/ubuntu/18.04/prod bionic InRelease
+Fetched 261 kB in 0s (607 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+All packages are up to date.
+takai@ubuntu18-dev:~$ sudo apt upgrade
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+takai@ubuntu18-dev:~$ pwsh
+PowerShell 7.3.3
+PS /home/takai> Get-Module -ListAvailable
+
+    Directory: /home/takai/.local/share/powershell/Modules
+
+ModuleType Version    PreRelease Name                                PSEdition ExportedCommands
+---------- -------    ---------- ----                                --------- ----------------
+Script     4.3.0                 GuestConfiguration                  Desk      {New-GuestConfigurationPacka…
+
+    Directory: /opt/microsoft/powershell/7/Modules
+
+ModuleType Version    PreRelease Name                                PSEdition ExportedCommands
+---------- -------    ---------- ----                                --------- ----------------
+Manifest   1.2.5                 Microsoft.PowerShell.Archive        Desk      {Compress-Archive, Expand-Ar…
+Manifest   7.0.0.0               Microsoft.PowerShell.Host           Core      {Start-Transcript, Stop-Tran…
+Manifest   7.0.0.0               Microsoft.PowerShell.Management     Core      {Add-Content, Clear-Content,…
+Manifest   7.0.0.0               Microsoft.PowerShell.Security       Core      {Get-Credential, Get-Executi…
+Manifest   7.0.0.0               Microsoft.PowerShell.Utility        Core      {Export-Alias, Get-Alias, Im…
+Script     1.4.8.1               PackageManagement                   Desk      {Find-Package, Get-Package, …
+Script     2.2.5                 PowerShellGet                       Desk      {Find-Command, Find-DSCResou…
+Script     2.2.6                 PSReadLine                          Desk      {Get-PSReadLineKeyHandler, S…
+Binary     2.0.3                 ThreadJob                           Desk      Start-ThreadJob
+
+PS /home/takai> Install-Module -Name GuestConfiguration
+PS /home/takai> Get-Module -Name GuestConfiguration -ListAvailable
+
+    Directory: /home/takai/.local/share/powershell/Modules
+
+ModuleType Version    PreRelease Name                                PSEdition ExportedCommands
+---------- -------    ---------- ----                                --------- ----------------
+Script     4.3.0                 GuestConfiguration                  Desk      {New-GuestConfigurationPacka…
+
+PS /home/takai> Get-Module -ListAvailable
+
+    Directory: /home/takai/.local/share/powershell/Modules
+
+ModuleType Version    PreRelease Name                                PSEdition ExportedCommands
+---------- -------    ---------- ----                                --------- ----------------
+Script     4.3.0                 GuestConfiguration                  Desk      {New-GuestConfigurationPacka…
+
+    Directory: /opt/microsoft/powershell/7/Modules
+
+ModuleType Version    PreRelease Name                                PSEdition ExportedCommands
+---------- -------    ---------- ----                                --------- ----------------
+Manifest   1.2.5                 Microsoft.PowerShell.Archive        Desk      {Compress-Archive, Expand-Ar…
+Manifest   7.0.0.0               Microsoft.PowerShell.Host           Core      {Start-Transcript, Stop-Tran…
+Manifest   7.0.0.0               Microsoft.PowerShell.Management     Core      {Add-Content, Clear-Content,…
+Manifest   7.0.0.0               Microsoft.PowerShell.Security       Core      {Get-Credential, Get-Executi…
+Manifest   7.0.0.0               Microsoft.PowerShell.Utility        Core      {Export-Alias, Get-Alias, Im…
+Script     1.4.8.1               PackageManagement                   Desk      {Find-Package, Get-Package, …
+Script     2.2.5                 PowerShellGet                       Desk      {Find-Command, Find-DSCResou…
+Script     2.2.6                 PSReadLine                          Desk      {Get-PSReadLineKeyHandler, S…
+Binary     2.0.3                 ThreadJob                           Desk      Start-ThreadJob
+
+PS /home/takai> exit
+takai@ubuntu18-dev:~$ ls -lha ./.local/share/powershell/Modules/
+total 12K
+drwxrwxr-x 3 takai takai 4.0K Mar 17 06:33 .
+drwxrwxr-x 5 takai takai 4.0K Mar 17 04:54 ..
+drwxrwxr-x 3 takai takai 4.0K Mar 17 04:55 GuestConfiguration
+takai@ubuntu18-dev:~$ ls -lha /etc/motd
+ls: cannot access '/etc/motd': No such file or directory
+takai@ubuntu18-dev:~$ sudo pwsh -c 'Get-GuestConfigurationPackageComplianceStatus -Path ./SCUGJ34LinuxBaseCon
+fig.zip'
+
+additionalProperties : {}
+assignmentName       : SCUGJ34LinuxBaseConfig
+complianceStatus     : False
+endTime              : 03/19/2023 08:46:43
+jobId                : f74ed38c-f77e-45ba-992e-bc70b8daaa56
+operationtype        : Consistency
+resources            : {@{complianceStatus=False; properties=; reasons=System.Object[]}}
+startTime            : 03/19/2023 08:46:41
+
+
+takai@ubuntu18-dev:~$ sudo pwsh -c 'Start-GuestConfigurationPackageRemediation -Path ./SCUGJ34LinuxBaseConfig
+.zip'
+
+additionalProperties : {}
+assignmentName       : SCUGJ34LinuxBaseConfig
+complianceStatus     : True
+endTime              : 03/19/2023 08:46:57
+jobId                : 9464757b-a518-4bff-b9cf-0262b1aeea84
+operationtype        : Consistency
+resources            : {@{complianceStatus=True; properties=; reasons=System.Object[]}}
+startTime            : 03/19/2023 08:46:55
+
+
+takai@ubuntu18-dev:~$ ls -lha /etc/motd
+-rw-r--r-- 1 root root 263 Mar 19 08:46 /etc/motd
+takai@ubuntu18-dev:~$ cat /etc/motd
+*******************************************
+* Welcome to SCUGJ34 Linux Demo !!        *
+*                                         *
+* Notice: This is PRODUCTION environment  *
+*******************************************
+Created by Custom DSC Resource : SCUGJFile
+takai@ubuntu18-dev:~$ exit
+logout
+Connection to ubuntu18-dev closed.
+PS C:\Users\takai\Documents\PowerShell> ssh -i .\.ssh\id_rsa takai@ubuntu18-dev
+Warning: Identity file .\.ssh\id_rsa not accessible: No such file or directory.
+Welcome to Ubuntu 18.04.6 LTS (GNU/Linux 5.4.0-1104-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun Mar 19 08:47:20 UTC 2023
+
+  System load:  0.1               Processes:           118
+  Usage of /:   7.4% of 28.89GB   Users logged in:     0
+  Memory usage: 3%                IP address for eth0: 10.0.0.5
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/azure/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+5 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+New release '20.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+*******************************************
+* Welcome to SCUGJ34 Linux Demo !!        *
+*                                         *
+* Notice: This is PRODUCTION environment  *
+*******************************************
+Created by Custom DSC Resource : SCUGJFile
+Last login: Sun Mar 19 08:44:41 2023 from 10.0.0.4
+takai@ubuntu18-dev:~$ exit
+logout
+Connection to ubuntu18-dev closed.
+PS C:\Users\takai\Documents\PowerShell> Stop-Transcript
+**********************
+PowerShell transcript end
+End time: 20230319084737
+**********************

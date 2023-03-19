@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus"
+        },
+        "guestConfigurationName": {
+            "value": "SCUGJ34LinuxBaseConfig"
+        },
+        "version": {
+            "value": "0.0.1.0"
+        },
+        "machine": {
+            "value": "Arcbox-Ubuntu-01"
+        },
+        "uri": {
+            "value": "https://scugj34storage.blob.core.windows.net/guestconfiguration/SCUGJ34LinuxBaseConfig.zip"
+        },
+        "hash": {
+            "value": "C609B3E0A58DE05DA251BFAC367B45FC92629F6228580119A16C747D4B82D524"
+        },
+        "type": {
+            "value": "ApplyAndMonitor"
+        }
+    }
+}
