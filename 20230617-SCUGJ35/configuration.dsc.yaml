@@ -1,0 +1,77 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+properties:
+  assertions:
+    - resource: OsVersion
+      directives:
+        description: Verify minimum OS version requirement
+        module: Microsoft.Windows.Developer
+        allowPrerelease: true
+      settings:
+        MinVersion: "10.0.19041"
+    - resource: Environment
+      directives:
+        module: PSDscResources
+      settings:
+        Name: 'ACCEPT_WINGET_CONFIGURATION'
+        Ensure: 'Absent'
+        Value: '0'
+        Target: 'Machine'      
+  resources:
+    - resource: Microsoft.Windows.Developer/DeveloperMode
+      directives:
+        description: Enable Developer Mode
+        allowPrerelease: true
+      settings:
+        Ensure: Present
+    - resource: Environment
+      directives:
+        module: PSDscResources
+      settings:
+        Name: 'EVENT_NAME'
+        Ensure: 'Present'
+        Value: 'SCUGJ#35'
+        Target: 'Machine'
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: VSCode
+      directives:
+        description: Install Visual Studio Code
+        allowPrerelease: true
+      settings:
+        id: Microsoft.VisualStudioCode
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Chrome
+      directives:
+        description: Install Google Chrome
+        allowPrerelease: true
+      settings:
+        id: Google.Chrome
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: BgInfo
+      directives:
+        description: Install BgInfo
+        allowPrerelease: true
+      settings:
+        id: Microsoft.Sysinternals.BGInfo
+        source: winget
+    - resource: User
+      id: CreateUser1
+      directives:
+        module: PSDscResources
+      settings:
+        UserName: user1
+        Ensure: 'Present'
+    - resource: Group
+      dependsOn:
+        - CreateUser1
+      directives:
+        module: PSDscResources
+      settings:
+        GroupName: Administrators
+        Ensure: 'Present'
+        Members:
+          - Administrator
+          - WDAGUtilityAccount
+          - user1
+  configurationVersion: 0.2.0

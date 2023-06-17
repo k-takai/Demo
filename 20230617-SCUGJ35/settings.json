@@ -1,0 +1,9 @@
+{
+    "$schema": "https://aka.ms/winget-settings.schema.json",
+
+    "experimentalFeatures": {
+        "dependencies": true,
+        "configuration": true,
+        "windowsFeature": true
+    }
+}
